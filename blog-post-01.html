@@ -9,20 +9,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Currículo">
 	<meta name="author" content="Miguel Angel Gómez Godínez">    
-	<link rel="shortcut icon" href="images/favicon.ico"> 
+	<link rel="shortcut icon" href="images/favicon.png"> 
 	
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	
 	<!-- FontAwesome JS-->
 	<script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-	
+
 	<!-- Theme CSS -->  
 	<link id="theme-style" rel="stylesheet" href="css/theme-7.css">
-	
+
 </head> 
 <!--//class="dark-mode" or class="light-mode"-->
 <body class="dark-mode">
+ 	
 	<header class="header text-center">	    
 		<div class="force-overflow">
 			<h1 class="blog-name pt-lg-1 mb-0" style="display:none"><a href="#">Miguel Angel G&oacute;mez God&iacute;nez</a></h1>
@@ -82,30 +83,180 @@
 <!--//header------------------------------------------------------------------------------------------------------------------------------------------------->
 	    
     <div class="main-wrapper">
-	    <section class="cta-section theme-bg-light py-5">
-		    <div class="container single-col-12">
-			    <h2 class="heading text-center">Restablecer contraseña de usuario en Windows 7, 8 y 10.</h2>
-			    <div class="project-intro text-center">
-					<p class="mb-0 lead">Todos lo hemos hecho antes. Te sientas a acceder a PC Windows, escribe su contraseña, y bang, te das cuenta que la has olvidado! intentas probar diferentes combinaciones de letras y números, pero nada funciona. ¿Qué haces ahora?</p>
+
+	    <article class="blog-post py-4">
+			<div class="resume-wrapper mx-auto col-11 col-md-11 col-lg-11 col-xl-11 shadow">
+				<div class="container single-col-max-width">
+					<header class="blog-post-header">
+						<h2 class="title mb-2">Restablecer contraseña de usuario en Windows 7, 8 y 10.</h2>
+						<div class="meta mb-3"><span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a href="#">4 comments</a></span></div>
+					</header>			    
+
+					<div class="blog-post-body">
+						<figure class="text-center blog-banner">
+							<img class="img-fluid" src="images/sshot-1-(1).png">
+							<figcaption class="mt-2 text-center image-caption">Image 1</figcaption>
+						</figure>
+
+						<p>Arrancamos con un DVD o USB de instalación de Windows.</p>
+
+						<figure class="text-center blog-banner">
+							<img class="img-fluid" src="images/sshot-1-(2).png">
+							<figcaption class="mt-2 text-center image-caption">Image 2</figcaption>
+						</figure>
+
+						<p>En la pantalla de instalación de Windows tenemos que pulsar : <b>Shift + F10</b>, nos abrirá una terminal CMD con permisos de administrador «Simbolo de sistema de windows»</p>
+
+						<figure class="text-center blog-banner">
+							<img class="img-fluid" src="images/sshot-1-(3).png">
+							<figcaption class="mt-2 text-center image-caption">Image 3</figcaption>
+						</figure>
+
+						<p>Escribimos lo siguiente:</p>
+
+C:
+<br>dir 
+<br><br><b>Si aparece lo siguiente:</b>
+<br>
+<br>	El volumen de la unidad C es Reservado para el sistema
+<br>	El número de serie del volumen es: 4870-9C08
+<br>	
+<br>	Directorio de C:\
+<br>	
+<br>No se encuentra el archivo
+<br><br><b>...continuamos con la siguiente letra (d:) hasta que se muestre la carpeta windows</b>
+<br><br>d:
+<br>dir
+<br>cd windows
+<br>cd system32
+<br>ren utilman.exe utilman1.exe
+<br>ren cmd.exe utilman.exe
+<br>shutdown -r -f -t 00	
+<br><br>
+					</div>
+					<div class="mx-auto col-12 col-md-11 col-lg-11 col-xl-10">
+<pre style="color:white;background:black;" class="px-2 py-2">
+Microsoft Windows [Versión 6.1.7601]
+
+X:\sources><code style="color:red;">c:</code>
+C:\><code style="color:red;">dir</code>
+
+	El volumen de la unidad C es Reservado para el sistema
+	El número de serie del volumen es: 4870-9C08
+	
+	Directorio de C:\
+	
+No se encuentra el archivo
+
+C:\><code style="color:red;">d:</code>
+D:\><code style="color:red;">dir</code>
+
+	El volumen de la unidad C es Reservado para el sistema
+	El número de serie del volumen es: 4870-9C08
+	
+	Directorio de C:\
+	
+10/06/2018  22:42         24  autoexec.bat
+10/06/2018  22:42         10  config.sys
+10/06/2018  22:42  &#60;DIR&#62;      Program Files
+10/06/2018  22:42  &#60;DIR&#62;      Users
+10/06/2018  22:42  &#60;DIR&#62;      Windows
+             2 archivos     32 bytes
+             3 dirs	4.267.626.496 libres
+
+D:\><code style="color:red;">cd windows</code>
+D:\Windows><code style="color:red;">cd system32</code>
+D:\Windows\System32><code style="color:red;">ren utilman.exe utilman1.exe</code>
+D:\Windows\System32><code style="color:red;">ren cmd.exe utilman.exe</code>
+D:\Windows\System32><code style="color:red;">shutdown -r -f -t 00</code>
+</pre>
+					</div>
+					
+					<p>Este ultimo comando hará que se produzca el reinicio de tu ordenador. Recuerda que cuando reinicie el ordenador, ahora tienes que retirar la memoria USB o DVD para que el arranque sea normal y se realice desde el disco duro.</p>
+					<p>Una vez que se inicie nuestro ordenado y nos situemos en el inicio de sesión del perfil de Windows al que queremos acceder sin conocer la contraseña y hacer clic en el icono en forma de reloj situado en la parte inferior izquierda de la pantalla (W7, W8 y W8.1) varía en W10, ya que aparece en la parte interior derecha.</p>
+
+					<figure class="text-center blog-banner">
+						<img class="img-fluid" src="images/sshot-1-(4).png">
+						<figcaption class="mt-2 text-center image-caption">Image 4</figcaption>
+					</figure>
+					
+					<p>Esto hará que se vuelva abrir de nuevo el CMD con derechosde administrador. Ahora tendremos que introducir los siguientes comandos:
+					<b><p>net user</p></b>
+					<p>Este es para saber los usuarios, yo cambiaré la contraseña de togangel</p>
+					<b><p>net user togangel contraseña</p></b>
+					<p>Este es para ponerle al usuario "togangel" la palabra "contraseña" como password de inicio de sesión.</p>
+					
+					<div class="mx-auto col-12 col-md-11 col-lg-11 col-xl-10">
+<pre style="color:white;background:black;" class="px-2 py-2">
+Microsoft Windows [Versión 6.1.7601]
+
+C:\Windows\System32><code style="color:red;">net user</code>
+Cuentas de usuario de \\
+----------------------------------------------------------
+Administrador            DefaultAccount           togangel
+Se ha completado el comando correctamente.
+
+C:\Windows\System32><code style="color:red;">net user togangel contraseña</code>
+Se ha completado el comando correctamente.
+
+C:\Windows\System32><code style="color:red;">exit</code>
+</pre>
+					</div>
+
+					<figure class="text-center blog-banner">
+						<img class="img-fluid" src="images/sshot-1-(5).png">
+						<figcaption class="mt-2 text-center image-caption">Image 5</figcaption>
+					</figure>
+
+					<p>Ahora solo te queda iniciar de sesión de dicho usuario de Windows y solo tendrás que introducir la nueva contraseña creada en el paso anterior para comprobar como ahora si puedes iniciar sesión en el usuario de Windows.</p>
+					
+					<figure class="text-center blog-banner">
+						<img class="img-fluid" src="images/sshot-1-(6).png">
+						<figcaption class="mt-2 text-center image-caption">Image 6</figcaption>
+						<img class="img-fluid" src="images/sshot-1-(7).png">
+						<figcaption class="mt-2 text-center image-caption">Image 7</figcaption>
+					</figure>
+
+					
+				    <div class="client-quote">
+						<div class="quote-holder">
+							<blockquote class="quote-content">
+								Nota Importante: Una vez que hayas terminado de realizar todo el tutorial y ya hayas conseguido iniciar sesión en tu cuenta de usuario de Windows, tendrás que volver a renombrar: utilman1.exe y cmd.exe a sus nombres originales para poder trabajar con normalidad.
+							</blockquote>
+							<i class="fas fa-quote-left"></i>
+						</div><!--//quote-holder-->
+					</div>					
+					<div class="p-2"></div>
+					<div class="mx-auto col-12 col-md-11 col-lg-11 col-xl-10">
+<pre style="color:white;background:black;" class="px-2 py-2">
+Microsoft Windows [Versión 6.1.7601]
+
+X:\sources><code style="color:red;">d:</code>
+D:\><code style="color:red;">cd windows</code>
+D:\Windows\><code style="color:red;">cd system32</code>
+D:\Windows\System32><code style="color:red;">ren utilman.exe cmd.exe</code>
+D:\Windows\System32><code style="color:red;">ren utilman1.exe utilman.exe</code>
+D:\Windows\System32><code style="color:red;">shutdown -r -f -t 00</code>
+</code></pre>
+					</div>
+					
 				</div>
-			    
-		    </div><!--//container-->
-	    </section>
-	    
+			</div>
+		</article>
 <!--//latest-togangel-section-->
 		<article class="resume-wrapper mx-auto theme-bg-light p-3 mb-4 my-4 shadow-lg">
-				<div class="resume-footer text-center">
-					<ul class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
-						<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="sms:+525511715490?body=Hola%20Miguel,%20Buen%20d&iacute;a%20"><i class="fas fa-address-card fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">SMS</span></a></li>
-						<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="tel:5511715490"><i class="fas fa-mobile-alt fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Phone</span></a></li>
-						<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://wa.me/5215511715490?text=Hola%20Miguel,%20Buen%20d&iacute;a%20"><i class="fab fa-whatsapp-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Whatsapp</span></a></li>
-						<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://m.me/100000558516720"><i class="fab fa-facebook-messenger fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Messenger</span></a></li>
-						<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://t.me/togangel"><i class="fab fa-telegram fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Telegram</span></a></li>
-						<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="mailto:togangel&#64;gmail.com?&subject=Gusto%20en%20saludarte&body=Hola%20Miguel,%20buen%20d&iacute;a%20"><i class="fas fa-envelope-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">E-Mail</span></a></li>
-						<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://fb.com/togangel"><i class="fab fa-facebook-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Facebook</span></a></li>
-						<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://twitter.com/togangel"><i class="fab fa-twitter-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Twitter</span></a></li>
-					</ul>
-				</div><!--//resume-footer-->
+			<div class="resume-footer text-center">
+				<ul class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
+					<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="sms:+525511715490?body=Hola%20Miguel,%20Buen%20d&iacute;a%20"><i class="fas fa-address-card fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">SMS</span></a></li>
+					<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="tel:5511715490"><i class="fas fa-mobile-alt fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Phone</span></a></li>
+					<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://wa.me/5215511715490?text=Hola%20Miguel,%20Buen%20d&iacute;a%20"><i class="fab fa-whatsapp-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Whatsapp</span></a></li>
+					<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://m.me/100000558516720"><i class="fab fa-facebook-messenger fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Messenger</span></a></li>
+					<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://t.me/togangel"><i class="fab fa-telegram fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Telegram</span></a></li>
+					<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="mailto:togangel&#64;gmail.com?&subject=Gusto%20en%20saludarte&body=Hola%20Miguel,%20buen%20d&iacute;a%20"><i class="fas fa-envelope-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">E-Mail</span></a></li>
+					<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://fb.com/togangel"><i class="fab fa-facebook-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Facebook</span></a></li>
+					<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="https://twitter.com/togangel"><i class="fab fa-twitter-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">Twitter</span></a></li>
+				</ul>
+			</div><!--//resume-footer-->
 		</article>
 	    
 		<!-- footer -->
@@ -119,10 +270,15 @@
 	<script src="plugins/jquery-3.3.1.min.js"></script>
 	<script src="plugins/popper.min.js"></script> 
 	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Page Specific JS -->
+    <script type="text/javascript" src="plugins/imagesloaded.pkgd.min.js"></script> 
+    <script type="text/javascript" src="plugins/isotope.pkgd.min.js"></script> 
+    <script type="text/javascript" src="plugins/js/isotope-custom.js"></script>
 	
 	<!-- Dark Mode -->
 	<script src="plugins/js-cookie.min.js"></script>
-	<script src="plugins/dark-mode.js"></script>
+	<script src="plugins/js/dark-mode.js"></script>
 
 </body>
 </html> 
