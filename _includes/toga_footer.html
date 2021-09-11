@@ -1,0 +1,27 @@
+			<!--//latest-togangel-section-->
+			<hr  class="m-1 p-1">
+			<div class="resume-footer text-center">
+				<ul class="resume-social-list list-inline mx-auto m-1 d-inline-block text-muted">
+				{% for netfad in site.fad %}
+					<li class="list-inline-item mb-0 mr-lg-3"><a class="resume-link" href="{{ netfad.url }}" target="_blank"><i class="fad fa-{{ netfad.title }} fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">{{ netfad.red }}</span></a></li>
+				{% endfor %}
+				{% for netfab in site.fab %}
+					<li class="list-inline-item mb-0 mr-lg-3"><a class="resume-link" href="{{ netfab.url }}" target="_blank"><i class="fab fa-{{ netfab.title }} fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">{{ netfab.red }}</span></a></li>
+				{% endfor %}
+				</ul>
+			</div><!--//resume-footer-->
+			</article>
+	<!-- footer -->
+	<footer class="footer text-muted text-center mb-3">
+		<small class="copyright">Copyright &copy; 2021 by <a class="resume-link" href="https://facebook.com/togangel/" target="_blank">Miguel Angel G&oacute;mez God&iacute;nez</a></small>
+	</footer>
+		</div><!--//main-wrapper-->
+
+	<!-- Javascript -->          
+	<script src="{{ site.url }}{{ site.baseurl }}/assets/plugins/jquery-3.3.1.min.js"></script>
+	<script src="{{ site.url }}{{ site.baseurl }}/assets/plugins/popper.min.js"></script> 
+	<script src="{{ site.url }}{{ site.baseurl }}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Dark Mode -->
+	<script src="{{ site.url }}{{ site.baseurl }}/assets/plugins/js-cookie.min.js"></script>
+	<script src="{{ site.url }}{{ site.baseurl }}/assets/plugins/dark-mode.js"></script>

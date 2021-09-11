@@ -1,0 +1,13 @@
+<div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Comparte en Facebook" target="_blank"><span class="count"><i class="fa fa-facebook-square"></i> Facebook</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ site.baseurl }}{{ page.url }}&hashtags=togangel" title="Comparte en Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="whatsapp"><a href="whatsapp://send?text={{ site.url }}{{ site.baseurl }}{{ page.url }}%20{{site.title}}%20{{ page.title }}" title="Comparte en Whatsapp"><span class="count"><i class="fa fa-whatsapp"></i> Whatsapp</span></a></li>
+    <li class="location-arrow"><a href="https://telegram.me/share/url?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&text={{ page.title }}" title="Comparte en Telegram" target="_blank"><span class="count"><i class="fa fa-location-arrow"></i> Telegram</span></a></li>
+<!--
+    <li class="location-arrow"><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&text={{ page.title }}" title="Comparte en LinkedIn" target="_blank"><span class="count"><i class="fa fa-linkedin"></i> LinkedIn</span></a></li>
+-->
+  </ul>
+    <br>
+    <a href="whatsapp://send?text={{ site.url }}{{ site.baseurl }}{{ page.url }}%20{{site.title}}%20{{ page.title }}" title="Comparte en Whatsapp"><span class="d-none d-md-block"><img style="display:block;float:none;margin-left:auto;margin-right:auto" width="150px" src="https://chart.apis.google.com/chart?cht=qr&chs=150x150&chld=H|0&chl={{ site.url }}{{ site.baseurl }}{{ page.url }}" alt="{{page.title}}" title="{{page.title}}"></span></a>
+</div><!-- /.social-share -->

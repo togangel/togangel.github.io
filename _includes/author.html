@@ -1,0 +1,32 @@
+<div class="read-more">
+  <div class="read-more-header">
+    <a href="{{site.url}}{{site.baseurl}}/about" class="read-more-btn">Acerca de mí</a>
+  </div><!-- /.read-more-header -->
+  <div class="read-more-content author-info">
+    <h3>{{site.owner.name}}</h3>
+    <div class="author-container">
+      <img class="author-img" src="{{site.url}}{{site.baseurl}}/{{site.owner.avatar}}" alt="{{site.owner.name}}" />
+      <div class="author-bio">{{site.owner.bio}}</div>
+    </div>
+    <div class="author-share">
+		<ul class="list-inline social-buttons">
+        {% for netfad in site.fad %}
+          <li><a href="{{ netfad.url }}" target="_blank"><i class="fad fa-{{ netfad.title }} fa-fw"></i></a></li>
+        {% endfor %}
+        {% for netfab in site.fab %}
+          <li><a href="{{ netfab.url }}" target="_blank"><i class="fab fa-{{ netfab.title }} fa-fw"></i></a></li>
+        {% endfor %}
+        </ul>
+<!--
+        {% if site.owner.twitter %}
+        <a href="https://twitter.com/{{site.owner.twitter}}?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-lang="es" data-show-count="false">Follow @{{site.owner.twitter}}</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {% endif %}
+        <br>
+        {% if site.owner.facebook %}
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v7.0" nonce="X6rBZ2o8"></script>
+        <a class="fb-like" data-href="https://fb.com/{{site.owner.facebook}}/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></a>
+        {% endif %}
+-->
+      </div>
+  </div>
+</div>
