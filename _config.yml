@@ -1,0 +1,127 @@
+#host:           192.168.128.53
+#port:           4000
+safe:           false
+title:          togangel Blog´s
+description:    Anotaciones, manuales, consejos, trucos, recordatorios y tips que he desarollado en la informática.
+url:           "https://togangel.github.io"
+#url:            "http://192.168.128.53"
+baseurl:        ""         # Background image to be tiled on all pages
+background:     background.png
+logo:           favicon.png     # logo visible in the topbar
+
+disqus_shortname:   # put your disqus here
+reading_time:       true
+words_per_minute:   100
+excerpt_separator:  <!--more-->
+
+
+menu:
+  - title:      'Etiquetas'
+    url:        '/tags'
+  - title:      'Categorías'
+    url:        '/categories'
+    type:       'categories'
+  - title:      'Favoritos'
+    url:        '/#'
+    submenu:
+      - title:      'Quién soy?'
+        url:        '/about'
+      - title:      'Blog posts'
+        url:        '/posts'
+
+# Owner/author information
+owner:
+  name:         Miguel Angel Gómez Godínez
+  avatar:       images/togangel.jpg
+  bio:          "Técnico en reparación de ordenadores y tecnología informática, resuelto y habilidoso para la resolución de problemas en equipos de sistemas Windows así como en sistemas Linux, así mismo para ofrecer consejos técnicos adecuados para prevenir futuros problemas y prolongar la vida de los equipos informáticos."
+  birth:        (37 a&ntilde;os) - 08/Julio/1984
+  user:         togangel
+#  site:         https://192.168.128.53
+  site:        https://togangel.github.io
+  email:        togangel&#64;gmail.com
+  twitter:      togangel
+  facebook:     togangel
+  youtube:      togangelito
+
+fad:
+  - title:      "address-card"
+    fa:         "address-card"
+    red:        "SMS"
+    url:        "sms:+525616295352?body=Hola%20Miguel,%20Buen%20d&iacute;a%20"
+  - title:      "mobile-android"
+    fa:         "mobile"
+    red:        "Phone"
+    url:        "tel://5616295352"
+  - title:      "envelope-square"
+    fa:         "envelope"
+    red:        "E-Mail"
+    url:        "mailto:togangel&#64;gmail.com?cc=togangel&#64;hotmail.com&subject=Gusto%20en%20saludarte&body=Hola%20Miguel,%20buen%20d&iacute;a%20"
+  - title:      "rss-square"
+    fa:         "rss"
+    red:        "Blog"
+    url:        "https://togangel.github.io/blog"
+
+fab:
+  - title:      "whatsapp-square"
+    fa:         "whatsapp"
+    url:        "https://wa.me/5215616295352?text=Hola%20Miguel,%20Buen%20d&iacute;a%20"
+    red:        "whatsapp"
+  - title:      "facebook-messenger"
+    fa:         "facebook-messenger"
+    url:        "https://m.me/100000558516720"
+    red:        "Messenger"
+  - title:      "telegram"
+    fa:         "telegram"
+    url:        "https://t.me/togangel"
+    red:        "Telegram"
+  - title:      "facebook-square"
+    fa:         "facebook"
+    url:        "https://fb.com/togangel"
+    red:        "Facebook"
+  - title:      "twitter-square"
+    fa:         "twitter"
+    url:        "https://twitter.com/togangel"
+    red:        "Twitter"
+  - title:      "linkedin"
+    fa:         "linkedin"
+    url:        "https://in.linkedin.com/in/togangel"
+    red:        "Linkedin"
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   UA-172935154-1
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+#timezone:          America/Mexico_City
+locale:             es-MX
+future:             true
+highlighter:        rouge
+markdown:           kramdown
+sass:
+  sass_dir:         _sass
+  style:            compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:          /:categories/:title/
+
+# Amount of post to show on home page
+paginate:           5
+paginate_path:      /blog/page:num/
+# if true, shows the floatting share buttons
+float_share:        true
+
+# Octopress
+# Default extensions
+post_ext:           md
+page_ext:           md
+# Found in _templates/
+post_layout:        post
+page_layout:        page
+# Format titles with titlecase?
+titlecase:          false
+
+include:            [".htaccess"]
+exclude:            ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+plugins:            [jekyll-paginate]
