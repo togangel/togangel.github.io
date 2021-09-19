@@ -3,6 +3,10 @@ layout: home
 title: Blog Categories
 description: "Archivo de posts acomodado por categoría."
 comments: false
+image:
+    feature: favicon.png
+    credit: togangel
+    creditlink: "https://togangel.github.io"
 ---
 
 {% capture site_cats %}{% for cat in site.categories %}{{ cat | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
