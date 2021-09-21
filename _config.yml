@@ -89,7 +89,7 @@ fab:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-172935154-1
-google_verify:
+google_verify:      4fzUxc4GjH5NA9tbEmhmOPI1gv6FJLY6yijvg8umttI
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
