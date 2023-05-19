@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instalación Adventure</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.collapse').on('show.bs.collapse', function () {
+				$('.collapse.show').collapse('hide');
+			});
+		});
+	</script>
+	<style>
+		.img-fluid {
+		  transition: transform .2s;
+		}
+		.img-fluid:hover {
+		  transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Instalación Adventure</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#menu1">Descargas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#menu2">Macrium</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#menu3">Carga de imagen</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#menu4">Configuración JP</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#menu5">Configuración EGM</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#menu6">Ajustes Jackpot Controller</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main class="container my-4" id="accordion">
+		<section>
+				<div class="alert alert-dark alert-dismissable">
+					<h1>Instalación</h1>
+					<p>Aquí se describen los pasos a seguir para instalar Adventure</p>
+				</div>
+				<div class="alert alert-danger alert-dismissable">
+					Importante instalar imagen correspondiente al hardware a usar Win10 o Win8
+				</div>
+		</section>
+		
+		<section data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="alert alert-info" id="menu1">
+			<h2>Software requerido</h2>
+		</section>
+		<!-- show -->
+		<section id="collapse1" class="collapse">
+			<div class="card">
+				<div class="card-header">
+					<h1>[WinSCP o Filezilla]</h1>
+				</div>
+				<div class="card-body">
+					<a class="link-dark" href="https://winscp.net/download/WinSCP-5.21.8-Setup.exe">WinSCP-5.21.8-Setup.exe</a>
+				</div>
+				<div class="card-header">
+					<h1>[Usb con Macrium]</h1>
+				</div>
+				<div class="card-body">
+					<a class="link-dark" href="winscp-ftp://TecnicoGC;x-ftppasvmode=0@189.213.198.110/Tools/rufus.exe">/Tools/rufus.exe</a>
+					<hr>
+					<a class="link-dark" href="winscp-ftp://TecnicoGC;x-ftppasvmode=0@189.213.198.110/Tools/Macrium-Reflect.iso">/Tools/Macrium-Reflect.iso</a>
+				</div>
+				<div class="card-header">
+					<h1>[Adventure]</h1>
+				</div>
+				<div class="card-body">
+					<a class="link-dark" href="winscp-ftp://TecnicoGC;x-ftppasvmode=0@189.213.198.110/Adventure_7.1/Adventure7-1_800p_Mex_5c93_1036_DA77_Win8_31012023-00-00.mrimg">/Adventure_7.1/Adventure7-1_800p_Mex_5c93_1036_DA77_Win8_31012023-00-00.mrimg [Kino DA77]</a>
+					<hr>
+					<a class="link-dark" href="winscp-ftp://TecnicoGC;x-ftppasvmode=0@189.213.198.110/Adventure_7.1/Adventure7-1_Mex_5c93_1036_Axiomtek_Win10_30012023-00-00.mrimg">/Adventure_7.1/Adventure7-1_Mex_5c93_1036_Axiomtek_Win10_30012023-00-00.mrimg [Axiomtek]</a>
+					<hr>
+					<a class="link-dark" href="winscp-ftp://TecnicoGC;x-ftppasvmode=0@189.213.198.110/Adventure_7.1/GameUpdate.Slot.CountrySelector_V2.0.15_44_MEX.zip">/Adventure_7.1/GameUpdate.Slot.CountrySelector_V2.0.15_44_MEX.zip</a>
+				</div>
+				<div class="card-header">
+					<h1>[Jackpot]</h1>
+				</div>
+				<div class="card-body">
+					<a class="link-dark" href="winscp-ftp://TecnicoGC;x-ftppasvmode=0@189.213.198.110/Imagenes/Mexico/Area%20Tecnica/Adventure_7.1/ADV_JP_Controller_800p_Mex_DA77_Win8_09032023-00-00.mrimg">/Adventure_7.1/ADV_JP_Controller_800p_Mex_DA77_Win8_09032023-00-00.mrimg [Kino DA77]</a>
+					<hr>
+					<a class="link-dark" href="winscp-ftp://TecnicoGC;x-ftppasvmode=0@189.213.198.110/Adventure_7.1/GameUpdate.JPController.CountrySelector_V2.zip">/Adventure_7.1/GameUpdate.JPController.CountrySelector_V2.zip</a>
+				</div>
+			</div>
+		</section>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="alert alert-info">
+		<h2>USB Booteable con Macrium</h2>
+		</div>
+		<section id="collapse2"class="collapse">
+			<div class="card">
+				<div class="card-header">
+					<p>Insertar la memoria USB e identificar qué unidad asigna (ejem. E:)</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-1.png" class="img-fluid mx-auto d-block" id="menu2">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Abres Rufus.exe</p>
+					<p>Seleccionamos la unidad USB:</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-2.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Damos en SELECT</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-3.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Buscamos y seleccionamos el archivo .ISO de (Macrium-Reflect.iso) y damos en abrir:</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-4.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Validamos que en "File System" esté en NTFS</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-5.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Damos en START</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-6.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Seleccionamos Write in ISO Image Mode (Recommended) con OK</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-7.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Confirmamos el borrado de archivos con OK</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-8.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Comenzará el proceso....</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-9.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Esperamos hasta que aparezca READY y Damos en Close</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-10.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<p>Por último (opcional), copiamos imagen .mrimg del mix en la memoria USB:</p>
+				</div>
+				<div class="card-body">
+					<img src="images/01/sshot-11.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+		</section>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="alert alert-info" id="menu3">
+		<h2>Instalar Imagen con Macrium</h2>
+		</div>
+		<section id="collapse3"class="collapse">
+			<div class="card">
+				<div class="card-header">
+					<h2>Instale la imagen en el SSD del EGM ST3 (Win10) o S3 (Win 8) utilizando Macrium.</h2>
+				</div>
+				<div class="card-body">
+					<p>Ingreso a la selección de booteo en EGM con la USB</p>
+					<div class="alert alert-success alert-dismissable">
+					[F7] Para ingresar al Bios setup en una DA77
+					</div>
+					<img src="images/02/sshot-1.png" class="img-fluid mx-auto d-block">
+					<div class="alert alert-success alert-dismissable">
+					[DEL] Para ingresar al Bios setup en una Axiomtek
+					</div>
+					<img src="images/02/sshot-2.png" class="img-fluid mx-auto d-block">
+					<p>Se recomienda seleccionar el booteo de la USB en UEFI</p>
+					<p>Ya cargado Macrium</p>
+					<p>Seleccionamos "Browse for an image file..."</p>
+					<img src="images/02/sshot-3.png" class="img-fluid mx-auto d-block">
+					<p>Buscamos la imagen correspondiente a cargar (S3, ST3 o JPController) con extension .mrimg y damos en open</p>
+					<img src="images/02/sshot-4.png" class="img-fluid mx-auto d-block">
+					<p>Vamos a la seccion de abajo y damos en "Restore Image"</p>
+					<img src="images/02/sshot-5.png" class="img-fluid mx-auto d-block">
+					<p>En la seccion de "Destination" - Damos en "Select a disk to restore to..."</p>
+					<img src="images/02/sshot-6.png" class="img-fluid mx-auto d-block">
+					<p>Seleccionamos el disco local</p>
+					<img src="images/02/sshot-7.png" class="img-fluid mx-auto d-block">
+					<p>Damos en Next</p>
+					<img src="images/02/sshot-8.png" class="img-fluid mx-auto d-block">
+					<p>Luego en Finish</p>
+					<img src="images/02/sshot-9.png" class="img-fluid mx-auto d-block">
+					<p>Confirmamos sobre escribir volumen con "continue..."</p>
+					<img src="images/02/sshot-10.png" class="img-fluid mx-auto d-block">
+					<p>Esperamos a que termine el proceso</p>
+					<img src="images/02/sshot-11.png" class="img-fluid mx-auto d-block">
+					<p>Cerramos todas las ventanas y se reiniciará la terminal</p>
+				</div>
+			</div>
+		</section>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="alert alert-info" id="menu5">
+		<h2>Jackpot Controller Configuración</h2>
+		</div>
+		<section id="collapse5"class="collapse">
+			<div class="card">
+				<div class="card-header">
+					<h2>Configuración de la conexión al Jackpot</h2>
+				</div>
+				<div class="card-body">
+					<div class="alert alert-primary" role="alert">
+						Instala la imagen en el pc correspondiente <a href="#menu3" class="alert-link">utilizando el software Macrium</a>.
+					</div>
+					<p>Cuando la copia de Macrium haya finalizado, la maquina se reiniciara y la configuración de inicio automático del Jackpot Controller nos guiará a través de los ajustes básicos del Jackpot Controller, los cuales en esta instancia están establecidos en los valores predeterminados.</p>
+					<p>Ingrese el número de serie del controlador de jackpot (GJP) y presione “OK”. La PC se reiniciará.</p>
+					<img src="images/04/sshot-1.png" class="img-fluid mx-auto d-block">
+					<p>Después de reiniciar, se abrirá la ventana "JackpotDisplay Config". Cierre la ventana con la "X" en la esquina inferior derecha.</p>
+					<img src="images/04/sshot-2.png" class="img-fluid mx-auto d-block">
+					<p>Se abrirá la ventana del “Aurum currency manipulator”. Presione el botón "Add".</p>
+					<img src="images/04/sshot-3.png" class="img-fluid mx-auto d-block">
+					<p>Aparecerá la ventana “Currency list”. Seleccione la moneda deseada y presione el botón “Accept”.</p>
+					<img src="images/04/sshot-4.png" class="img-fluid mx-auto d-block">
+					<p>Volverá a la ventana del "Aurum currency manipulator" con una moneda seleccionada que se muestra. Presione el botón "Save and close" para confirmar la selección.</p>
+					<img src="images/04/sshot-5.png" class="img-fluid mx-auto d-block">
+					<p>Se abrirá la ventana “Jackpot controller installation”. Cierre la ventana con la "X" en la esquina inferior derecha.</p>
+					<img src="images/04/sshot-6.png" class="img-fluid mx-auto d-block">
+					<p>Comenzará a cargar el progresivo</p>
+					<img src="images/04/sshot-8.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+		</section>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="alert alert-info" id="menu6">
+		<h2>Jackpot Controller Ingreso de Licencia</h2>
+		</div>
+		<section id="collapse6"class="collapse">
+			<div class="card">
+				<div class="card-header">
+					<h2>Solicitud de la licencia de Jackpot Controller</h2>
+				</div>
+				<div class="card-body">
+					<div class="alert alert-success alert-dismissable">
+					Solicita la licencia para Jackpot de Adventure con los siguientes datos: Serie de JP y Wibu Key por correo.
+					</div>
+					<h5>Cuando se muestre la pantalla inicial</h5>
+					<p>Presione la tecla INSERT para interrumpir el inicio e ingresa al BiOS Login</p>
+					<img src="images/04/sshot-7.png" class="img-fluid mx-auto d-block">
+					<p>Si se hace correctamente, aparecerá una ventana de inicio del BiOS Login. presionamos la tecla BLOCK NUM para habilitar la celda de usuario en verde e Ingrese el nombre de usuario y la contraseña del administrador para ingresar</p>
+					<img src="images/04/sshot-9.png" class="img-fluid mx-auto d-block">
+					<p>La licencia correspondiente para el Jackpot Controller. Las licencias deben estar en una carpeta creada en el USB de esta forma: usb:/goldclub/licenses/LicenceXX-XXXXXXXX.xml</p>
+					<img src="images/04/sshot-10.png" class="img-fluid mx-auto d-block">
+					<p>Dentro del BiOS, abra la pestaña "Restore" y presione el botón "System update" para abrir la ventana de actualización del sistema.</p>
+					<img src="images/04/sshot-11.png" class="img-fluid mx-auto d-block">
+					<p>Seleccione la licencia del controlador de jackpot titulada "GameUpdate.Slot.LicenceFileManager.JP" y presione "OK".</p>
+					<img src="images/04/sshot-12.png" class="img-fluid mx-auto d-block">
+					<p>Se abre una ventana de confirmación. Presione “YES”.</p>
+					<img src="images/04/sshot-13.png" class="img-fluid mx-auto d-block">
+					<p>Se abre un Administrador de archivos de licencia, que muestra la información de la licencia actual. Pulse el botón “COPY LICENCE”.</p>
+					<img src="images/04/sshot-14.png" class="img-fluid mx-auto d-block">
+					<p>Se abre una ventana de confirmación de actualización de licencia. Presione "OK" y reinicie el controlador de jackpot.</p>
+					<img src="images/04/sshot-15.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+		</section>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="alert alert-info" id="menu4">
+		<h2>Configuración EGM</h2>
+		</div>
+		<section id="collapse4"class="collapse">
+			<div class="card">
+				<div class="card-header">
+					<h2>Ajustes de configuración Básica del EGM</h2>
+				</div>
+				<div class="card-body">
+					<p>Cuando la copia de Macrium haya finalizado, la maquina se reiniciara y la configuración de inicio automático del EGM nos guiará a través de los ajustes básicos del EGM, los cuales en esta instancia están establecidos en los valores predeterminados.</p>
+					<p>Configurar No. de Serie</p>
+					<img src="images/03/sshot-1.png" class="img-fluid mx-auto d-block">
+					<p>Configurar llave Dallas (Ingresala 2 veces)</p>
+					<img src="images/03/sshot-2.png" class="img-fluid mx-auto d-block">
+					<p>Configurar Denominaciones y darle en Next</p>
+					<img src="images/03/sshot-3.png" class="img-fluid mx-auto d-block">
+					<p>Configurar Dallas de la sala y darle en Next</p>
+					<img src="images/03/sshot-4.png" class="img-fluid mx-auto d-block">
+					<p>Configurar Billetero</p>
+					<img src="images/03/sshot-5.png" class="img-fluid mx-auto d-block">
+					<p>Darle en REMOVE BILL, quitar la seleccion de "Active" y darle APPLY como en la sig. imagen:</p>
+					<img src="images/03/sshot-6.png" class="img-fluid mx-auto d-block">
+					<p>Configurar Monedero</p>
+					<img src="images/03/sshot-7.png" class="img-fluid mx-auto d-block">
+					<p>Darle en REMOVE Coin, quitar la seleccion de "Active" y darle APPLY como en la sig. imagen:</p>
+					<img src="images/03/sshot-8.png" class="img-fluid mx-auto d-block">
+					<p>Validar No. de serie y Lenguaje y dar Close</p>
+					<img src="images/03/sshot-9.png" class="img-fluid mx-auto d-block">
+					<p>Cuando se muestre la pantalla de inicio inicial</p>
+					<p>Acceda a la BiOS de EGM haciendo clic en la esquina superior izquierda de la pantalla de inicio o presionando la tecla [INSERT]</p>
+					<img src="images/03/sshot-10.png" class="img-fluid mx-auto d-block">
+					<p>Si se hace correctamente, se le presentará la pantalla de inicio de sesión de BiOS con un código QR y un teclado numérico</p>
+					<img src="images/03/sshot-11.png" class="img-fluid mx-auto d-block">
+					<p>Se escanea el código con tu dispositivo móvil y se enviará al correo slot.login@winsysgroup.com (sin asunto)</p>
+					<img src="images/03/sshot-12.png" class="img-fluid mx-auto d-block">
+					<p>El servidor responderá con un código de 6 digitos que se ingresaran a la terminal</p>
+					<img src="images/03/sshot-13.png" class="img-fluid mx-auto d-block">
+					<p>Si se hace correctamente, yá habrás ingresado correctamente</p>
+					<img src="images/03/sshot-14.png" class="img-fluid mx-auto d-block">
+					<p>Vamos a la pestaña de RESTORE</p>
+					<img src="images/03/sshot-1-Restore.png" class="img-fluid mx-auto d-block">
+					<p>Seleccionamos System update</p>
+					<img src="images/03/sshot-1-System Update.png" class="img-fluid mx-auto d-block">
+					<p>Seleccionamos System update</p>
+					<img src="images/03/sshot-1-Select Update.png" class="img-fluid mx-auto d-block">
+					<p>Seleccionamos System update</p>
+					<img src="images/03/sshot-1-Country-0.png" class="img-fluid mx-auto d-block">
+					<p>Seleccionamos System update</p>
+					<img src="images/03/sshot-1-Country-1.png" class="img-fluid mx-auto d-block">
+					<p>Seleccionamos System update</p>
+					<img src="images/03/sshot-1-Country-2.png" class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+		</section>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse-0" class="alert alert-info" id="menu4">
+		<h2>Configuración EGM</h2>
+		</div>
+		<section id="collapse-0"class="collapse show">
+			<div class="card">
+			</div>
+		</section>
+	</main>
+</body>
+</html>
+				
+
