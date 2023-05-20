@@ -7,9 +7,8 @@
 	<meta name="description" content="Aquí se describen los pasos a seguir para instalar Adventure, paso a paso">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<!-- Open Graph -->
-	<meta property="og:locale" content="es-MX">
-	<meta property="og:type" content="article">
 	<meta property="og:title" content="Manual de instalación de Adventure 7.1 &#8211; Miguel Angel Gómez Godínez">
+	<meta property="og:url" content="http://togangel.github.io/winsystems/adventure.html">
 	<meta property="og:description" content="Aquí se describen los pasos a seguir para instalar Adventure, paso a paso">
 	<meta property="og:image" content="images/logo.png">
 	<link rel="shortcut icon" href="images/logo.png">
@@ -28,52 +27,35 @@
 		});
 	</script>
 	<script type="text/javascript">
-    // Deshabilitar clic derecho
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
     });
-
-    // Desactivar selección de texto
     document.addEventListener('selectstart', function(e) {
         e.preventDefault();
     });
-
-    // Cifrar el contenido HTML
-    // (Añade tu propio algoritmo de cifrado)
     function encryptHTML(content) {
-        // Cifrar el contenido aquí
         return encryptedContent;
     }
-
-    // Desencriptar el contenido HTML
-    // (Utiliza el mismo algoritmo de cifrado para descifrarlo)
     function decryptHTML(content) {
-        // Descifrar el contenido aquí
         return decryptedContent;
     }
-
-    // Cargar el contenido cifrado y descifrarlo
     window.onload = function() {
         var encryptedContent = "Aquí va tu contenido cifrado";
         var decryptedContent = decryptHTML(encryptedContent);
         document.body.innerHTML = decryptedContent;
     };
-</script>
-<script type="text/javascript">
-    // Deshabilitar la función de impresión
-    window.onbeforeprint = function() {
-       // alert("La impresión está desactivada para esta página.");
-        return false;
-    };
-
-    // Ocultar los estilos de impresión
-    var style = document.createElement("style");
-    style.type = "text/css";
-    style.media = "print";
-    style.appendChild(document.createTextNode("@media print { body { display: none !important; } }"));
-    document.head.appendChild(style);
-</script>
-
+	</script>
+	<script type="text/javascript">
+		window.onbeforeprint = function() {
+		// alert("Está desactivada para esta página.");
+			return false;
+		};
+		var style = document.createElement("style");
+		style.type = "text/css";
+		style.media = "print";
+		style.appendChild(document.createTextNode("@media print { body { display: none !important; } }"));
+		document.head.appendChild(style);
+	</script>
 	<style>
 		.img-fluid {
 		  transition: transform .2s;
@@ -110,6 +92,9 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#menu6">Ajustes Jackpot Controller</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#menu6">Cierre de Producto</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -121,19 +106,35 @@
 					Aquí se describen los pasos a seguir para instalar Adventure 7.1
 				</div>
 				<div class="alert alert-danger alert-dismissable">
-					<b>Es importante tener en cuenta el hardware específico que se utilizará, ya sea el Kino DA77 con Windows 8 o el Axiomtek con Windows 10. Asegúrate de contar con la imagen correspondiente al hardware que vas a utilizar antes de proceder con la instalación.</b>
+					Es importante tener en cuenta el hardware específico que se utilizará, ya sea el <b>[Kino DA77]</b> con Windows 8 o el <b>[Axiomtek]</b> con Windows 10.
+				</div>
+				<div class="alert alert-danger alert-dismissable">
+					Asegúrate de contar con la imagen correspondiente al hardware que vas a utilizar antes de proceder con la instalación.
+				</div>
+				<div class="alert alert-success alert-dismissable">
+					Solicita las licencias <b>.xml</b> y <b>.dll</b> para cada uno de los EGM de Adventure con los siguientes datos por correo: MIX, Serie de los EGM y Wibu Key.
+				</div>
+				<div class="alert alert-success alert-dismissable">
+					Solicita la licencia <b>.xml</b> para el Jackpot de Adventure con los siguientes datos por correo: Tema de JP, Serie de JP y Wibu Key.
 				</div>
 		</section>
 		<div data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="alert alert-info" id="menu1">
 			<h2>Software requerido</h2>
 		</div>
-		<section id="collapse1" class="collapse">
+		<section id="collapse1" class="collapse show">
 			<div class="card">
 				<div class="card-header">
 					<h1>[WinSCP o Filezilla]</h1>
 				</div>
 				<div class="card-body">
-					<a class="link-dark" href="https://winscp.net/download/WinSCP-5.21.8-Setup.exe">WinSCP-5.21.8-Setup.exe</a>
+					<div class="alert alert-info alert-dismissable">
+						Los links de descarga funcionan sólo con <b>WinSCP</b> instalado.
+						<hr>
+						Si cuentas con FileZilla sólo sigue la ruta
+					</div>
+					<a class="link-dark" href="https://winscp.net/download/WinSCP-5.21.8-Setup.exe">WinSCP-5.21.8-Setup.exe</a> (Recomendado)
+					<hr>
+					<a class="link-dark" href="https://dl1.cdn.filezilla-project.org/client/FileZilla_3.64.0_win64-setup.exe?h=VFeoDSxgjEfQhYvgciPayQ&x=1684623105">FileZilla_3.64.0_win64-setup.exe</a>
 				</div>
 				<div class="card-header">
 					<h1>[Usb con Macrium]</h1>
@@ -166,10 +167,10 @@
 		<div data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="alert alert-info" id="menu2">
 		<h2>USB Booteable con Macrium</h2>
 		</div>
-		<section id="collapse2" class="collapse">
+		<section id="collapse2" class="collapse show">
 			<div class="card">
 				<div class="card-header">
-					Insertar la memoria USB e identificar qué unidad asigna (ejem. E:)
+					Insertar la memoria USB e identificar qué unidad asigna (ejem. E:).
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-1.png" class="img-fluid mx-auto d-block">
@@ -177,9 +178,9 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Abres Rufus.exe
+					Abre Rufus.exe
 					<hr>
-					Seleccionamos la unidad USB:
+					Seleccionamos la unidad usb:
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-2.png" class="img-fluid mx-auto d-block">
@@ -195,7 +196,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Buscamos y seleccionamos el archivo .ISO de (Macrium-Reflect.iso) y damos en <b class="btn btn-secondary">abrir</b>
+					Buscamos y seleccionamos el archivo .ISO de <b>Macrium-Reflect.iso</b> y damos en <b class='btn btn-secondary'>abrir</b>.
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-4.png" class="img-fluid mx-auto d-block">
@@ -203,7 +204,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Validamos que en "File System" esté en NTFS
+					Validamos que en <b>"File System"</b> esté en "NTFS". Es posible que muestre "FAT32" u otro sistema de archivos.
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-5.png" class="img-fluid mx-auto d-block">
@@ -219,7 +220,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Seleccionamos Write in ISO Image Mode (Recommended) con <b class="btn btn-secondary">OK</b>
+					Seleccionamos <b>"Write in ISO Image Mode (Recommended)"</b> y damos en <b class="btn btn-secondary">OK</b>
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-7.png" class="img-fluid mx-auto d-block">
@@ -243,7 +244,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Esperamos hasta que aparezca READY y Damos en <b class="btn btn-secondary">Close</b>
+					Esperamos hasta que aparezca <b>"READY"</b> y damos en <b class="btn btn-secondary">Close</b>.
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-10.png" class="img-fluid mx-auto d-block">
@@ -251,27 +252,20 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Por último (opcional), copiamos imagen .mrimg del mix en la memoria USB:
+					Por último, copiamos la imagen <b>.mrimg</b> del mix en la memoria USB.
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-11.png" class="img-fluid mx-auto d-block">
 				</div>
 			</div>
 		</section>
-<!--
-			<div class="card">
-				<div class="card-header">
-				</div>
-				<div class="card-body">
-				</div>
-			</div>
--->		<div data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="alert alert-info" id="menu3">
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="alert alert-info" id="menu3">
 		<h2>Instalar Imagen con Macrium</h2>
 		</div>
-		<section id="collapse3" class="collapse">
+		<section id="collapse3" class="collapse show">
 			<div class="card">
 				<div class="card-header">
-					<h2>Instale la imagen en el SSD del EGM ST3 (Win10) o S3 (Win 8) utilizando Macrium.</h2>
+					<h2>Instale la imagen en el SSD del EGM [Kino DA77] W8 normalmente S3 y JP o [Axiomtek] W10 Normalmente ST3 utilizando Macrium.</h2>
 				</div>
 				<div class="card-body">
 					<div class="alert alert-success alert-dismissable">
@@ -294,7 +288,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Buscamos la imagen correspondiente a cargar (S3, ST3 o JPController) con extension .mrimg y damos en <b class="btn btn-secondary">open</b>
+					Buscamos la imagen correspondiente a cargar [Kino DA77] o [Axiomtek] con extension <b>.mrimg</b> y damos click en <b class="btn btn-secondary">open</b>
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-4.png" class="img-fluid mx-auto d-block">
@@ -302,7 +296,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Vamos a la seccion de abajo y damos en <b class="btn btn-secondary">Restore Image</b>
+					Vamos a la sección de abajo y damos click en <b class="btn btn-secondary">Restore Image</b>
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-5.png" class="img-fluid mx-auto d-block">
@@ -310,7 +304,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					En la seccion de "Destination" - Damos en <b class="btn btn-secondary">Select a disk to restore to...</b>
+					En la sección de 'Destination', damos click en <b class='btn btn-secondary'>Select a disk to restore to...</b>
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-6.png" class="img-fluid mx-auto d-block">
@@ -318,7 +312,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Seleccionamos el disco el SSD del EGM / JP a clonar
+					Seleccionamos el SSD local del EGM / JP a clonar
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-7.png" class="img-fluid mx-auto d-block">
@@ -326,7 +320,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Damos en <b class="btn btn-secondary">Next</b>
+					Damos click en <b class="btn btn-secondary">Next</b>
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-8.png" class="img-fluid mx-auto d-block">
@@ -334,7 +328,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Luego damos en <b class="btn btn-secondary">Finish</b>
+					Damos click en <b class="btn btn-secondary">Finish</b>
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-9.png" class="img-fluid mx-auto d-block">
@@ -342,7 +336,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Confirmamos sobre escribir volumen con <b class="btn btn-secondary">continue...</b>
+					Confirmamos sobrescribir el volumen con <b class='btn btn-secondary'>continue...</b>
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-10.png" class="img-fluid mx-auto d-block">
@@ -350,7 +344,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Esperamos a que termine el proceso y damos en <b class="btn btn-secondary">ok</b>
+					Esperamos a que termine el proceso y damos click en <b class="btn btn-secondary">ok</b>
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-11.png" class="img-fluid mx-auto d-block">
@@ -367,18 +361,18 @@
 		<div data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="alert alert-info" id="menu4">
 		<h2>Jackpot Controller Configuración</h2>
 		</div>
-		<section id="collapse4" class="collapse">
+		<section id="collapse4" class="collapse show">
 			<div class="card">
 				<div class="card-header">
 					<h2>Configuración de Jackpot Controller</h2>
 				</div>
 				<div class="card-body">
 					<div class="alert alert-primary" role="alert">
-						Instala la imagen en el pc correspondiente <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="alert-link">utilizando el software Macrium</a>.
+						Instala la imagen en el SSD correspondiente <a data-toggle='collapse' data-parent='#accordion' href='#collapse3' class='alert-link'>utilizando el software Macrium</a>
 					</div>
-					Cuando la copia de Macrium haya finalizado, el JP se reiniciara y la configuración de inicio automático del Jackpot Controller nos guiará a través de los ajustes básicos del Jackpot Controller, los cuales en esta instancia están establecidos en los valores predeterminados.
+						Cuando la copia de Macrium haya finalizado, el JP se reiniciará y la configuración de inicio automático del Jackpot Controller nos guiará a través de los ajustes básicos del Jackpot Controller, los cuales en esta instancia están establecidos en los valores predeterminados.
 					<hr>
-					Ingrese el número de serie del controlador de jackpot (GJP) y presione <b class="btn btn-secondary">OK</b>. La JP se reiniciará.
+						Ingrese el número de serie del controlador de jackpot (GJP) y presione <b class="btn btn-secondary">OK</b>. EL JP se reiniciará.
 					<img src="images/04/sshot-1.png" class="img-fluid mx-auto d-block">
 				</div>
 				<div class="card">
@@ -426,7 +420,7 @@
 		<div data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="alert alert-info" id="menu5">
 		<h2>Jackpot Controller Licencia</h2>
 		</div>
-		<section id="collapse5" class="collapse">
+		<section id="collapse5" class="collapse show">
 			<div class="card">
 				<div class="card-header">
 					<h2>Solicitud de la licencia de Jackpot Controller</h2>
@@ -508,7 +502,7 @@
 		<div data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="alert alert-info" id="menu6">
 		<h2>Configuración del EGM</h2>
 		</div>
-		<section id="collapse6" class="collapse">
+		<section id="collapse6" class="collapse show">
 			<div class="card">
 				<div class="card-header">
 					<h2>Ajustes de configuración  del EGM</h2>
@@ -742,7 +736,7 @@
 		<div data-toggle="collapse" data-parent="#accordion" href="#collapse7" class="alert alert-info" id="menu7">
 		<h2>Ingreso de Licencias al EGM</h2>
 		</div>
-		<section id="collapse7" class="collapse">
+		<section id="collapse7" class="collapse show">
 			<div class="card">
 				<div class="card-header">
 					<h2>Solicitud de las Licencias del EGM</h2>
@@ -795,8 +789,105 @@
 				</div>
 			</div>
 		</section>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse8" class="alert alert-info" id="menu8">
+			<h2>Cierre de producto</h2>
+		</div>
+		<section id="collapse8" class="collapse show">
+			<div class="card">
+				<div class="card-header">
+					SI todo se realizó correctamente, se valida tomando evidencia fotogáfica de lo siguiente para el cierre.
+				</div>
+				<div class="card-body">
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Denominaciones</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">RTP</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Cash In</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Apuesta Máxima</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Apuesta Mínima</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Spin (Una jugada con apuesta mínima)</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">(Si aplica) Pantalla de cada una de las pestañas del juego</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Jackpot Avanzado</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Panorámicas de ubicación de la Isla</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+				</div>
+			<div class="card">
+				<div class="card-header">
+					<h2>Después de haber obtenido las pruebas anteriores, se extrae lo siguiente.</h2>
+				</div>
+				<div class="card-body">
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Logs históricos</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+					<a href="#" class="alert-link">Device Manager Data [DMD's]</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </body>
 </html>
 				
 
+<!--
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse10" class="alert alert-info" id="menu10">
+		<h2>Instalar Imagen con Macrium</h2>
+		</div>
+		<section id="collapse10" class="collapse show">
+			<div class="card">
+				<div class="card-header">
+				</div>
+				<div class="card-body">
+				</div>
+			</div>
+		</section>
+-->
