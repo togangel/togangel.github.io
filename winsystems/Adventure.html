@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Instalación Adventure</title>
+	<title>Manual de instalación de Adventure 7.1 &#8211; Miguel Angel Gómez Godínez</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta name="description" content="Aquí se describen los pasos a seguir para instalar Adventure, paso a paso">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Open Graph -->
+	<meta property="og:locale" content="es-MX">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Manual de instalación de Adventure 7.1 &#8211; Miguel Angel Gómez Godínez">
+	<meta property="og:description" content="Aquí se describen los pasos a seguir para instalar Adventure, paso a paso">
+	<meta property="og:image" content="images/logo.png">
+	<link rel="shortcut icon" href="images/logo.png">
+	<style>
+		body {
+			font-family: "Times New Roman", Times, serif;
+		}
+	</style>	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script>
@@ -27,11 +39,11 @@
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Instalación Adventure</a>
+			<img src="images/logo.png" alt="Logo" height="50"><a class="navbar-brand" href="#menu0">Instalación Adventure 7.1</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-<!--			<div class="collapse navbar-collapse" id="navbarNav">
+			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item">
 						<a class="nav-link" href="#menu1">Descargas</a>
@@ -40,7 +52,7 @@
 						<a class="nav-link" href="#menu2">Macrium</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#menu3">Carga de imagen</a>
+						<a class="nav-link" href="#menu3">Instalar Imagen</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#menu4">Configuración JP</a>
@@ -53,24 +65,21 @@
 					</li>
 				</ul>
 			</div>
--->
 		</nav>
 	</header>
 	<main class="container my-4" id="accordion">
-		<section>
+		<section id="menu0">
 				<div class="alert alert-dark alert-dismissable">
 					<h1>Instalación</h1>
-					Aquí se describen los pasos a seguir para instalar Adventure
+					Aquí se describen los pasos a seguir para instalar Adventure 7.1
 				</div>
 				<div class="alert alert-danger alert-dismissable">
-					Importante instalar imagen correspondiente al hardware a usar Win10 o Win8
+					<b>Importante instalar imagen correspondiente al hardware a usar [Kino DA77] W8 o [Axiomtek] W10</b>
 				</div>
 		</section>
-		
 		<section data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="alert alert-info" id="menu1">
 			<h2>Software requerido</h2>
 		</section>
-		<!-- show -->
 		<section id="collapse1" class="collapse">
 			<div class="card">
 				<div class="card-header">
@@ -107,7 +116,7 @@
 				</div>
 			</div>
 		</section>
-		<div data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="alert alert-info">
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="alert alert-info" id="menu2">
 		<h2>USB Booteable con Macrium</h2>
 		</div>
 		<section id="collapse2"class="collapse">
@@ -116,12 +125,13 @@
 					Insertar la memoria USB e identificar qué unidad asigna (ejem. E:)
 				</div>
 				<div class="card-body">
-					<img src="images/01/sshot-1.png" class="img-fluid mx-auto d-block" id="menu2">
+					<img src="images/01/sshot-1.png" class="img-fluid mx-auto d-block">
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-header">
-					<p>Abres Rufus.exe</p>
+					Abres Rufus.exe
+					<hr>
 					Seleccionamos la unidad USB:
 				</div>
 				<div class="card-body">
@@ -154,7 +164,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					<p>Damos en START</p>
+					Damos en START
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-6.png" class="img-fluid mx-auto d-block">
@@ -162,7 +172,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					<p>Seleccionamos Write in ISO Image Mode (Recommended) con OK</p>
+					Seleccionamos Write in ISO Image Mode (Recommended) con OK
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-7.png" class="img-fluid mx-auto d-block">
@@ -170,7 +180,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					<p>Confirmamos el borrado de archivos con OK</p>
+					Confirmamos el borrado de archivos con OK
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-8.png" class="img-fluid mx-auto d-block">
@@ -178,7 +188,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					<p>Comenzará el proceso....</p>
+					Comenzará el proceso....
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-9.png" class="img-fluid mx-auto d-block">
@@ -186,7 +196,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					<p>Esperamos hasta que aparezca READY y Damos en Close</p>
+					Esperamos hasta que aparezca READY y Damos en Close
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-10.png" class="img-fluid mx-auto d-block">
@@ -194,7 +204,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					<p>Por último (opcional), copiamos imagen .mrimg del mix en la memoria USB:</p>
+					Por último (opcional), copiamos imagen .mrimg del mix en la memoria USB:
 				</div>
 				<div class="card-body">
 					<img src="images/01/sshot-11.png" class="img-fluid mx-auto d-block">
@@ -210,7 +220,7 @@
 					<h2>Instale la imagen en el SSD del EGM ST3 (Win10) o S3 (Win 8) utilizando Macrium.</h2>
 				</div>
 				<div class="card-body">
-					<p>Ingreso a la selección de booteo en EGM con la USB</p>
+					Ingreso a la selección de booteo en EGM con la USB
 					<div class="alert alert-success alert-dismissable">
 					[F7] Para ingresar al Bios setup en una DA77
 					</div>
@@ -219,64 +229,65 @@
 					[DEL] Para ingresar al Bios setup en una Axiomtek
 					</div>
 					<img src="images/02/sshot-2.png" class="img-fluid mx-auto d-block">
-					<p>Se recomienda seleccionar el booteo de la USB en UEFI</p>
-					<p>Ya cargado Macrium</p>
-					<p>Seleccionamos "Browse for an image file..."</p>
+					Se recomienda seleccionar el booteo de la USB en UEFI
+					Ya cargado Macrium
+					Seleccionamos "Browse for an image file..."
 					<img src="images/02/sshot-3.png" class="img-fluid mx-auto d-block">
-					<p>Buscamos la imagen correspondiente a cargar (S3, ST3 o JPController) con extension .mrimg y damos en open</p>
+					Buscamos la imagen correspondiente a cargar (S3, ST3 o JPController) con extension .mrimg y damos en open
 					<img src="images/02/sshot-4.png" class="img-fluid mx-auto d-block">
-					<p>Vamos a la seccion de abajo y damos en "Restore Image"</p>
+					Vamos a la seccion de abajo y damos en "Restore Image"
 					<img src="images/02/sshot-5.png" class="img-fluid mx-auto d-block">
-					<p>En la seccion de "Destination" - Damos en "Select a disk to restore to..."</p>
+					En la seccion de "Destination" - Damos en "Select a disk to restore to..."
 					<img src="images/02/sshot-6.png" class="img-fluid mx-auto d-block">
-					<p>Seleccionamos el disco local</p>
+					Seleccionamos el disco local
 					<img src="images/02/sshot-7.png" class="img-fluid mx-auto d-block">
-					<p>Damos en Next</p>
+					Damos en Next
 					<img src="images/02/sshot-8.png" class="img-fluid mx-auto d-block">
-					<p>Luego en Finish</p>
+					Luego en Finish
 					<img src="images/02/sshot-9.png" class="img-fluid mx-auto d-block">
-					<p>Confirmamos sobre escribir volumen con "continue..."</p>
+					Confirmamos sobre escribir volumen con "continue..."
 					<img src="images/02/sshot-10.png" class="img-fluid mx-auto d-block">
-					<p>Esperamos a que termine el proceso</p>
+					Esperamos a que termine el proceso
 					<img src="images/02/sshot-11.png" class="img-fluid mx-auto d-block">
-					<p>Cerramos todas las ventanas y se reiniciará la terminal</p>
+					Cerramos todas las ventanas y se reiniciará el EGM
 				</div>
 			</div>
 		</section>
-		<div data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="alert alert-info" id="menu5">
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="alert alert-info" id="menu4">
 		<h2>Jackpot Controller Configuración</h2>
 		</div>
-		<section id="collapse5"class="collapse">
+		<section id="collapse4"class="collapse">
 			<div class="card">
 				<div class="card-header">
 					<h2>Configuración de Jackpot Controller</h2>
 				</div>
 				<div class="card-body">
 					<div class="alert alert-primary" role="alert">
-						Instala la imagen en el pc correspondiente <a href="#menu3" class="alert-link">utilizando el software Macrium</a>.
+						Instala la imagen en el pc correspondiente <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="alert-link">utilizando el software Macrium</a>.
 					</div>
-					<p>Cuando la copia de Macrium haya finalizado, la maquina se reiniciara y la configuración de inicio automático del Jackpot Controller nos guiará a través de los ajustes básicos del Jackpot Controller, los cuales en esta instancia están establecidos en los valores predeterminados.</p>
-					<p>Ingrese el número de serie del controlador de jackpot (GJP) y presione “OK”. La PC se reiniciará.</p>
+					Cuando la copia de Macrium haya finalizado, el EGM se reiniciara y la configuración de inicio automático del Jackpot Controller nos guiará a través de los ajustes básicos del Jackpot Controller, los cuales en esta instancia están establecidos en los valores predeterminados.
+					<hr>
+					Ingrese el número de serie del controlador de jackpot (GJP) y presione “OK”. La PC se reiniciará.
 					<img src="images/04/sshot-1.png" class="img-fluid mx-auto d-block">
-					<p>Después de reiniciar, se abrirá la ventana "JackpotDisplay Config". Cierre la ventana con la "X" en la esquina inferior derecha.</p>
+					Después de reiniciar, se abrirá la ventana "JackpotDisplay Config". Cierre la ventana con la "X" en la esquina inferior derecha.
 					<img src="images/04/sshot-2.png" class="img-fluid mx-auto d-block">
-					<p>Se abrirá la ventana del “Aurum currency manipulator”. Presione el botón "Add".</p>
+					Se abrirá la ventana del “Aurum currency manipulator”. Presione el botón "Add".
 					<img src="images/04/sshot-3.png" class="img-fluid mx-auto d-block">
-					<p>Aparecerá la ventana “Currency list”. Seleccione la moneda deseada y presione el botón “Accept”.</p>
+					Aparecerá la ventana “Currency list”. Seleccione la moneda deseada y presione el botón “Accept”.
 					<img src="images/04/sshot-4.png" class="img-fluid mx-auto d-block">
-					<p>Volverá a la ventana del "Aurum currency manipulator" con una moneda seleccionada que se muestra. Presione el botón "Save and close" para confirmar la selección.</p>
+					Volverá a la ventana del "Aurum currency manipulator" con una moneda seleccionada que se muestra. Presione el botón "Save and close" para confirmar la selección.
 					<img src="images/04/sshot-5.png" class="img-fluid mx-auto d-block">
-					<p>Se abrirá la ventana “Jackpot controller installation”. Cierre la ventana con la "X" en la esquina inferior derecha.</p>
+					Se abrirá la ventana “Jackpot controller installation”. Cierre la ventana con la "X" en la esquina inferior derecha.
 					<img src="images/04/sshot-6.png" class="img-fluid mx-auto d-block">
-					<p>Comenzará a cargar el progresivo</p>
+					Comenzará a cargar el progresivo
 					<img src="images/04/sshot-8.png" class="img-fluid mx-auto d-block">
 				</div>
 			</div>
 		</section>
-		<div data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="alert alert-info" id="menu6">
-		<h2>Jackpot Controller Ingreso de Licencia</h2>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="alert alert-info" id="menu5">
+		<h2>Jackpot Controller Licencia</h2>
 		</div>
-		<section id="collapse6"class="collapse">
+		<section id="collapse5"class="collapse">
 			<div class="card">
 				<div class="card-header">
 					<h2>Solicitud de la licencia de Jackpot Controller</h2>
@@ -286,74 +297,79 @@
 					Solicita la licencia para Jackpot de Adventure con los siguientes datos: Serie de JP y Wibu Key por correo.
 					</div>
 					<h5>Cuando se muestre la pantalla inicial</h5>
-					<p>Presione la tecla INSERT para interrumpir el inicio e ingresa al BiOS Login</p>
+					Presione la tecla <kbd>INSERT</kbd> para interrumpir el inicio e ingresa al BiOS Login
 					<img src="images/04/sshot-7.png" class="img-fluid mx-auto d-block">
-					<p>Si se hace correctamente, aparecerá una ventana de inicio del BiOS Login. presionamos la tecla BLOCK NUM para habilitar la celda de usuario en verde e Ingrese el nombre de usuario y la contraseña del administrador para ingresar</p>
+					Si se hace correctamente, aparecerá una ventana de inicio del BiOS Login. presionamos la tecla <kbd>BLOCK NUM</kbd> para habilitar la celda de usuario en verde e Ingrese el nombre de usuario y la contraseña del administrador para ingresar
 					<img src="images/04/sshot-9.png" class="img-fluid mx-auto d-block">
-					<p>La licencia correspondiente para el Jackpot Controller. Las licencias deben estar en una carpeta creada en el USB de esta forma: usb:/goldclub/licenses/LicenceXX-XXXXXXXX.xml</p>
+					La licencia correspondiente para el Jackpot Controller. Las licencias deben estar en una carpeta creada en el USB de esta formato:
+					<br>
+					usb:/goldclub/licenses/LicenceXX-XXXXXXXX.xml
 					<img src="images/04/sshot-10.png" class="img-fluid mx-auto d-block">
-					<p>Dentro del BiOS, abra la pestaña "Restore" y presione el botón "System update" para abrir la ventana de actualización del sistema.</p>
+					Dentro del BiOS, abra la pestaña "Restore" y presione el botón "System update" para abrir la ventana de actualización del sistema.
 					<img src="images/04/sshot-11.png" class="img-fluid mx-auto d-block">
-					<p>Seleccione la licencia del controlador de jackpot titulada "GameUpdate.Slot.LicenceFileManager.JP" y presione "OK".</p>
+					Seleccione la licencia del controlador de jackpot titulada "GameUpdate.Slot.LicenceFileManager.JP" y presione "OK".
 					<img src="images/04/sshot-12.png" class="img-fluid mx-auto d-block">
-					<p>Se abre una ventana de confirmación. Presione “YES”.</p>
+					Se abre una ventana de confirmación. Presione “YES”.
 					<img src="images/04/sshot-13.png" class="img-fluid mx-auto d-block">
-					<p>Se abre un Administrador de archivos de licencia, que muestra la información de la licencia actual. Pulse el botón “COPY LICENCE”.</p>
+					Se abre un Administrador de archivos de licencia, que muestra la información de la licencia actual. Pulse el botón “COPY LICENCE”.
 					<img src="images/04/sshot-14.png" class="img-fluid mx-auto d-block">
-					<p>Se abre una ventana de confirmación de actualización de licencia. Presione "OK" y reinicie el controlador de jackpot.</p>
+					Se abre una ventana de confirmación de actualización de licencia. Presione "OK" y reinicie el controlador de jackpot.
 					<img src="images/04/sshot-15.png" class="img-fluid mx-auto d-block">
 				</div>
 			</div>
 		</section>
-		<div data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="alert alert-info" id="menu4">
-		<h2>Terminal Configuración</h2>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="alert alert-info" id="menu6">
+		<h2>Configuración del EGM</h2>
 		</div>
-		<section id="collapse4"class="collapse">
+		<section id="collapse6"class="collapse">
 			<div class="card">
 				<div class="card-header">
 					<h2>Ajustes de configuración  del EGM</h2>
 				</div>
 				<div class="card-body">
-					<p>Cuando la copia de Macrium haya finalizado, la maquina se reiniciara y la configuración de inicio automático del EGM nos guiará a través de los ajustes básicos del EGM, los cuales en esta instancia están establecidos en los valores predeterminados.</p>
-					<p>Configurar No. de Serie</p>
+					<div class="alert alert-primary" role="alert">
+						Instala la imagen en el EGM correspondiente <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="alert-link">utilizando el software Macrium</a>.
+					</div>
+					Cuando la copia de Macrium haya finalizado, el EGM se reiniciara y la configuración de inicio automático del EGM nos guiará a través de los ajustes básicos del EGM, los cuales en esta instancia están establecidos en los valores predeterminados.
+					Configurar No. de Serie
 					<img src="images/03/sshot-1.png" class="img-fluid mx-auto d-block">
-					<p>Configurar llave Dallas (Ingresala 2 veces)</p>
+					Configurar llave Dallas (Ingresala 2 veces)
 					<img src="images/03/sshot-2.png" class="img-fluid mx-auto d-block">
-					<p>Configurar Denominaciones y darle en Next</p>
+					Configurar Denominaciones y darle en Next
 					<img src="images/03/sshot-3.png" class="img-fluid mx-auto d-block">
-					<p>Configurar Dallas de la sala y darle en Next</p>
+					Configurar Dallas de la sala y darle en Next
 					<img src="images/03/sshot-4.png" class="img-fluid mx-auto d-block">
-					<p>Configurar Billetero</p>
+					Configurar Billetero
 					<img src="images/03/sshot-5.png" class="img-fluid mx-auto d-block">
-					<p>Darle en REMOVE BILL, quitar la seleccion de "Active" y darle APPLY como en la sig. imagen:</p>
+					Darle en REMOVE BILL, quitar la seleccion de "Active" y darle APPLY como en la sig. imagen:
 					<img src="images/03/sshot-6.png" class="img-fluid mx-auto d-block">
-					<p>Configurar Monedero</p>
+					Configurar Monedero
 					<img src="images/03/sshot-7.png" class="img-fluid mx-auto d-block">
-					<p>Darle en REMOVE Coin, quitar la seleccion de "Active" y darle APPLY como en la sig. imagen:</p>
+					Darle en REMOVE Coin, quitar la seleccion de "Active" y darle APPLY como en la sig. imagen:
 					<img src="images/03/sshot-8.png" class="img-fluid mx-auto d-block">
-					<p>Validar No. de serie y Lenguaje y dar Close</p>
+					Validar No. de serie y Lenguaje y dar Close
 					<img src="images/03/sshot-9.png" class="img-fluid mx-auto d-block">
-					<p>Cuando se muestre la pantalla de inicio inicial</p>
-					<p>Acceda a la BiOS de EGM haciendo clic en la esquina superior izquierda de la pantalla de inicio o presionando la tecla [INSERT]</p>
+					Cuando se muestre la pantalla de inicio inicial
+					Acceda a la BiOS de EGM haciendo clic en la esquina superior izquierda de la pantalla de inicio o presionando la tecla [INSERT]
 					<img src="images/03/sshot-10.png" class="img-fluid mx-auto d-block">
-					<p>Si se hace correctamente, se le presentará la pantalla de inicio de sesión de BiOS con un código QR y un teclado numérico</p>
+					Si se hace correctamente, se le presentará la pantalla de inicio de sesión de BiOS con un código QR y un teclado numérico
 					<img src="images/03/sshot-11.png" class="img-fluid mx-auto d-block">
-					<p>Se escanea el código con tu dispositivo móvil y se enviará al correo slot.login@winsysgroup.com (sin asunto)</p>
+					Se escanea el código con tu dispositivo móvil y se enviará al correo slot.login@winsysgroup.com (sin asunto)
 					<img src="images/03/sshot-12.png" class="img-fluid mx-auto d-block">
-					<p>El servidor responderá con un código de 6 digitos que se ingresaran a la terminal</p>
+					El servidor responderá con un código de 6 digitos que se ingresaran al EGM
 					<img src="images/03/sshot-13.png" class="img-fluid mx-auto d-block">
-					<p>Si se hace correctamente, yá habrás ingresado correctamente</p>
+					Si se hace correctamente, yá habrás ingresado correctamente
 					<img src="images/03/sshot-14.png" class="img-fluid mx-auto d-block">
-					<p>Vamos a la pestaña de RESTORE</p>
+					Vamos a la pestaña de RESTORE
 					<img src="images/03/sshot-15.png" class="img-fluid mx-auto d-block">
-					<p>Seleccionamos System update</p>
+					Seleccionamos System update
 					<img src="images/03/sshot-16.png" class="img-fluid mx-auto d-block">
-					<p>Seleccionamos el update GameUpdate.Slot.CountrySelector_Adventure_V2.0.15.44_MEX.zip</p>
+					Seleccionamos el update GameUpdate.Slot.CountrySelector_Adventure_V2.0.15.44_MEX.zip
 					<img src="images/03/sshot-17.png" class="img-fluid mx-auto d-block">
-					<p>Confirmamos con YES</p>
+					Confirmamos con YES
 					<img src="images/03/sshot-18.png" class="img-fluid mx-auto d-block">
 					<div class="alert alert-success alert-dismissable">
-					Seleccionamos el tipo de placa que tiene la terminal
+					Seleccionamos el tipo de placa que tiene el EGM
 					</div>
 					<div class="alert alert-warning alert-dismissable">
 					Para placa [DA77]
@@ -366,16 +382,16 @@
 					<div class="alert alert-success alert-dismissable">
 					Seleccionamos [configure] dependiendo la denominación con la opción [(WHITOUT) LegacyBonus]
 					</div>
-					<p>Confirmamos con YES</p>
+					Confirmamos con YES
 					<img src="images/03/sshot-21.png" class="img-fluid mx-auto d-block">
-					<p>Ingresamos la serie de la terminal</p>
+					Ingresamos la serie del EGM
 					<img src="images/03/sshot-22.png" class="img-fluid mx-auto d-block">
-					<p>Ingresamos la serie del Jackpot Controller</p>
+					Ingresamos la serie del Jackpot Controller
 					<img src="images/03/sshot-23.png" class="img-fluid mx-auto d-block">
-					<p>La terminal se reiniciará haciendo un RAMCLEAR INITIAL SETUP</p>
+					El EGM se reiniciará haciendo un RAMCLEAR INITIAL SETUP
 					<img src="images/03/sshot-24.png" class="img-fluid mx-auto d-block">
 					<div class="alert alert-danger  alert-dismissable">
-					<p>Por lo que tendrémos que configurar los parametros anteriormente mencionados.</p>
+					Por lo que tendrémos que configurar los parametros anteriormente mencionados.
 					<ul>
 						<li>Configuración de Dallas</li>
 						<li>Denominación</li>
@@ -388,58 +404,58 @@
 				</div>
 			</div>
 		</section>
-		<div data-toggle="collapse" data-parent="#accordion" href="#collapse7" class="alert alert-info" id="menu4">
-		<h2>Ingreso de Licencias a la Terminal</h2>
+		<div data-toggle="collapse" data-parent="#accordion" href="#collapse7" class="alert alert-info" id="menu7">
+		<h2>Ingreso de Licencias al EGM</h2>
 		</div>
 		<section id="collapse7"class="collapse">
 			<div class="card">
 				<div class="card-header">
-					<h2>Solicitud de la licencia de terminal</h2>
+					<h2>Solicitud de las Licencias del EGM</h2>
 				</div>
 				<div class="card-body">
 					<div class="alert alert-success alert-dismissable">
-					Solicita la licencia para la terminal de MIX de juego Adventure con los siguientes datos: Serie de JP y Wibu Key por correo.
+					Solicita las licencias para el EGM de Adventure con los siguientes datos por correo: Mix, Serie de JP y Wibu Key.
 					</div>
 					<h5>Cuando se muestre la pantalla inicial</h5>
-					<p>Presione la tecla INSERT para interrumpir el inicio e ingresa al BiOS Login</p>
+					Presione la tecla INSERT para interrumpir el inicio e ingresa al BiOS Login
 					<img src="images/03/sshot-10.png" class="img-fluid mx-auto d-block">
-					<p>Si se hace correctamente, aparecerá una ventana de inicio del BiOS Login. presionamos la tecla BLOCK NUM para habilitar la celda de usuario en verde e Ingrese el nombre de usuario y la contraseña del administrador para ingresar</p>
+					Si se hace correctamente, aparecerá una ventana de inicio del BiOS Login. presionamos la tecla BLOCK NUM para habilitar la celda de usuario en verde e Ingrese el nombre de usuario y la contraseña del administrador para ingresar
 					<img src="images/03/sshot-11.png" class="img-fluid mx-auto d-block">
-					<p>La licencia correspondiente para el Jackpot Controller. Las licencias deben estar en una carpeta creada en el USB de este formato:</p>
+					La licencia correspondiente para el Jackpot Controller. Las licencias deben estar en una carpeta creada en el USB de este formato:
 					<ul>
 						<li>usb:/goldclub/licenses/licence_XX-XXXXXXXX.dll</li>
 						<li>usb:/goldclub/licenses/LicenceXX-XXXXXXXX.xml</li>
 					</ul>
 					<img src="images/03/sshot-25.png" class="img-fluid mx-auto d-block">
-					<p>Dentro del BiOS, abra la pestaña "Restore" y presione el botón "System update" para abrir la ventana de actualización del sistema.</p>
+					Dentro del BiOS, abra la pestaña "Restore" y presione el botón "System update" para abrir la ventana de actualización del sistema.
 					<img src="images/03/sshot-26.png" class="img-fluid mx-auto d-block">
-					<p>Seleccione la licencia del controlador de jackpot titulada "GameUpdate.Slot.LicenceFileManager.JP" y presione "OK".</p>
+					Seleccione la licencia del controlador de jackpot titulada "GameUpdate.Slot.LicenceFileManager.JP" y presione "OK".
 					<img src="images/03/sshot-27.png" class="img-fluid mx-auto d-block">
-					<p>Se abre una ventana de confirmación. Presione “YES”.</p>
+					Se abre una ventana de confirmación. Presione “YES”.
 					<img src="images/03/sshot-28.png" class="img-fluid mx-auto d-block">
-					<p>Se abre un Administrador de archivos de licencia, que muestra la información de la licencia actual. Pulse el botón “COPY LICENCE”.</p>
+					Se abre un Administrador de archivos de licencia, que muestra la información de la licencia actual. Pulse el botón “COPY LICENCE”.
 					<img src="images/03/sshot-29.png" class="img-fluid mx-auto d-block">
-					<p>Se abre una ventana de confirmación de actualización de licencia. Presione "OK" y reinicie el controlador de jackpot.</p>
+					Se abre una ventana de confirmación de actualización de licencia. Presione "OK" y reinicie el controlador de jackpot.
 					<img src="images/03/sshot-30.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-51.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-52.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-53.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-54.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-55.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-56.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-57.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-58.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-59.png" class="img-fluid mx-auto d-block">
-					<p></p>
+					
 					<img src="images/03/sshot-60.png" class="img-fluid mx-auto d-block">
 				</div>
 			</div>
