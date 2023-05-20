@@ -27,6 +27,53 @@
 			});
 		});
 	</script>
+	<script type="text/javascript">
+    // Deshabilitar clic derecho
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Desactivar selección de texto
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+    });
+
+    // Cifrar el contenido HTML
+    // (Añade tu propio algoritmo de cifrado)
+    function encryptHTML(content) {
+        // Cifrar el contenido aquí
+        return encryptedContent;
+    }
+
+    // Desencriptar el contenido HTML
+    // (Utiliza el mismo algoritmo de cifrado para descifrarlo)
+    function decryptHTML(content) {
+        // Descifrar el contenido aquí
+        return decryptedContent;
+    }
+
+    // Cargar el contenido cifrado y descifrarlo
+    window.onload = function() {
+        var encryptedContent = "Aquí va tu contenido cifrado";
+        var decryptedContent = decryptHTML(encryptedContent);
+        document.body.innerHTML = decryptedContent;
+    };
+</script>
+<script type="text/javascript">
+    // Deshabilitar la función de impresión
+    window.onbeforeprint = function() {
+       // alert("La impresión está desactivada para esta página.");
+        return false;
+    };
+
+    // Ocultar los estilos de impresión
+    var style = document.createElement("style");
+    style.type = "text/css";
+    style.media = "print";
+    style.appendChild(document.createTextNode("@media print { body { display: none !important; } }"));
+    document.head.appendChild(style);
+</script>
+
 	<style>
 		.img-fluid {
 		  transition: transform .2s;
@@ -74,7 +121,7 @@
 					Aquí se describen los pasos a seguir para instalar Adventure 7.1
 				</div>
 				<div class="alert alert-danger alert-dismissable">
-					<b>Importante instalar imagen correspondiente al hardware a usar [Kino DA77] W8 o [Axiomtek] W10</b>
+					<b>Es importante tener en cuenta el hardware específico que se utilizará, ya sea el Kino DA77 con Windows 8 o el Axiomtek con Windows 10. Asegúrate de contar con la imagen correspondiente al hardware que vas a utilizar antes de proceder con la instalación.</b>
 				</div>
 		</section>
 		<div data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="alert alert-info" id="menu1">
@@ -263,7 +310,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					En la seccion de "Destination" - Damos en <b class="btn btn-secondary">"Select a disk to restore to...</b>
+					En la seccion de "Destination" - Damos en <b class="btn btn-secondary">Select a disk to restore to...</b>
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-6.png" class="img-fluid mx-auto d-block">
@@ -271,7 +318,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Seleccionamos el disco el SSD del EGM a clonar
+					Seleccionamos el disco el SSD del EGM / JP a clonar
 				</div>
 				<div class="card-body">
 					<img src="images/02/sshot-7.png" class="img-fluid mx-auto d-block">
@@ -311,7 +358,7 @@
 			</div>
 			<div class="card">
 				<div class="card-header">
-					Cerramos todas las ventanas y se reiniciará el EGM
+					Cerramos todas las ventanas y se reiniciará el EGM / JP
 				</div>
 				<div class="card-body">
 				</div>
@@ -329,9 +376,9 @@
 					<div class="alert alert-primary" role="alert">
 						Instala la imagen en el pc correspondiente <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="alert-link">utilizando el software Macrium</a>.
 					</div>
-					Cuando la copia de Macrium haya finalizado, el EGM se reiniciara y la configuración de inicio automático del Jackpot Controller nos guiará a través de los ajustes básicos del Jackpot Controller, los cuales en esta instancia están establecidos en los valores predeterminados.
+					Cuando la copia de Macrium haya finalizado, el JP se reiniciara y la configuración de inicio automático del Jackpot Controller nos guiará a través de los ajustes básicos del Jackpot Controller, los cuales en esta instancia están establecidos en los valores predeterminados.
 					<hr>
-					Ingrese el número de serie del controlador de jackpot (GJP) y presione <b class="btn btn-secondary">OK</b>. La PC se reiniciará.
+					Ingrese el número de serie del controlador de jackpot (GJP) y presione <b class="btn btn-secondary">OK</b>. La JP se reiniciará.
 					<img src="images/04/sshot-1.png" class="img-fluid mx-auto d-block">
 				</div>
 				<div class="card">
@@ -450,7 +497,7 @@
 				</div>
 				<div class="card">
 					<div class="card-header">
-						Se abre una ventana de confirmación de actualización de licencia. Presione <b class="btn btn-secondary">OK</b> y reinicie el controlador de jackpot.
+						Se abre una ventana de confirmación de actualización de licencia. Presione <b class="btn btn-secondary">OK</b> y damos en <b class="btn btn-secondary">Close</b> para regresar.
 					</div>
 					<div class="card-body">
 						<img src="images/04/sshot-15.png" class="img-fluid mx-auto d-block">
