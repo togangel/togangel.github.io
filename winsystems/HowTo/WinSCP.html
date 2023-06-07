@@ -82,7 +82,7 @@
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<img src="../images/logo.png" alt="Logo" height="50"><a class="navbar-brand" href="#menu0">Instalación WinSCP</a>
+			<img src="../images/logo.png" alt="Logo" height="50"><a class="navbar-brand" href="#menu0">WinSCP</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -100,9 +100,18 @@
 	</header>
 	<main class="container my-4">
 		<section id="menu0">
-			<h1>[Software requerido]</h1>
-			<p><a class="link-dark" href="https://winscp.net/download/WinSCP-5.21.8-Setup.exe">WinSCP-5.21.8-Setup.exe</a></p>
+			<div class="card">
+				<div class="card-header">
+					<h2>Software requerido</h2>
+				</div>
+				<div class="card-body">
+					<div class="alert alert-info alert-dismissable">
+						<a class="link-dark" href="https://winscp.net/download/WinSCP-5.21.8-Setup.exe">WinSCP-5.21.8-Setup.exe</a>
+					</div>
+				</div>
+			</div>
 		</section>
+		<br>
 		<section>
 			<div class="card">
 				<div class="card-header" id="menu1">
@@ -123,15 +132,15 @@
 				</div>
 			</div>
 		</section>
+		<br>
 		<section id="conclusion">
 			<div class="alert alert-success alert-dismissable">
 				¡Listo! Ahora ya podrás hacer uso de la aplicación para realizar las descargas. <b>(Cada vez que necesites descargar un archivo, se solicitará la contraseña del FTP para poder descargarlo.)</b>
 			</div>
 		</section>
-		<section id="conclusion">
-			<div class="alert alert-success alert-dismissable">
+		<section id="goback">
+			<div class="alert alert-info alert-dismissable">
 				<button type="button" class="btn btn-dark" onclick="goBack()">Regresar</button>
-				
 				<script>
 				function goBack() {
 				window.history.back();
@@ -139,8 +148,7 @@
 				</script>
 			</div>
 		</section>
-		
-	</div>
+	</main>
 </body>
 </html>
 				
