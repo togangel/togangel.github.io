@@ -113,6 +113,12 @@
 			</div>
 		</section>
 		<br>
+		<section id="conclusion">
+			<div class="alert alert-danger alert-dismissable">
+				<b>Si tienes la linea <code>&lsaquo;SecuritySwitchesEnabled&rsaquo;false&lsaquo;&frasl;SecuritySwitchesEnabled&rsaquo;</code>en el archivo mgconfig.xml debes de borrarla antes de empezar el proceso.</b>
+			</div>
+		</section>
+		<br>
 		<section>
 			<div class="card">
 				<div class="card-header" id="menu1">
@@ -153,86 +159,28 @@
 		<section>
 			<div class="card">
 				<div class="card-header" id="menu1">
-					<h2>Pruebas desde la terminal de GC</h2>
+					<h2>Pruebas desde GC terminal</h2>
 				</div>
 				<div class="card-body">
-					<p>Verificación del BiOS de la PC</p>
-					<p>Conecte un teclado USB y reinicie el EGM. Presione la tecla "delete" durante el inicio del sistema para ingresar al BiOS de la PC.</p>
-					<p>Dentro del BiOS de la PC, vaya a la pestaña "Advanced" y abra la configuración de "SuperIO Configuration".</p>
-					<img src="../HowTo/Switches_KB5/sshot-07.png" class="img-fluid mx-auto d-block" title="Advanced">
+					<p>Ve a la pestaña <b>Diag</b> y selecciona <b>GC Terminal</b></p>
+					<img src="../HowTo/Switches_KB5/sshot-09.png" class="img-fluid mx-auto d-block" title="Advanced">
 					
-					<p>Asegúrese de que todos los valores sean los que se muestran aquí.</p>
-					<img src="../HowTo/Switches_KB5/sshot-08.png" class="img-fluid mx-auto d-block" title="SuperIO Configuration">
-				</div>
-			</div>
-		</section>
-		<section>
-			<div class="card">
-				<div class="card-header" id="menu1">
-					<h2>Instalación</h2>
-				</div>
-				<div class="card-body">
-					<p>Descarga la opción recomendada</p>
-					<img src="../images/05/sshot-01.png" class="img-fluid mx-auto d-block">
+					<p>Dentro de la herramienta GC Terminal, utilice el menú desplegable en la esquina inferior izquierda y abra el puerto 30300.</p>
+					<img src="../HowTo/Switches_KB5/sshot-10.png" class="img-fluid mx-auto d-block" title="SuperIO Configuration">
 
-					<p>Abre el programa de instalación haciendo doble clic en su icono.</p>
-					<img src="../images/05/sshot-00.png" class="img-fluid mx-auto d-block">
+					<p>En el lado del comando, escribimos <b>ve</b> como se muestra y nos mostrará la version del controlador:</p>
+					<img src="../HowTo/Switches_KB5/sshot-11.png" class="img-fluid mx-auto d-block" title="SuperIO Configuration">
 
-					<p>Enseguida damos click en el botón <b class='btn btn-secondary'>I Agree</b></p>
-					<img src="../images/05/sshot-02.png" class="img-fluid mx-auto d-block">
-
-					<p>Damos click en el botón <b class='btn btn-secondary'>Next ></b></p>
-					<img src="../images/05/sshot-03.png" class="img-fluid mx-auto d-block">
-
-					<p>Damos click en el botón <b class='btn btn-secondary'>Next ></b></p>
-					<img src="../images/05/sshot-04.png" class="img-fluid mx-auto d-block">
-
-					<p>Damos click en el botón <b class='btn btn-secondary'>Next ></b></p>
-					<img src="../images/05/sshot-05.png" class="img-fluid mx-auto d-block">
-
-					<p>Damos click en el botón <b class='btn btn-secondary'>Install</b></p>
-					<img src="../images/05/sshot-06.png" class="img-fluid mx-auto d-block">
-
-					<p>Damos click en el botón <b class='btn btn-secondary'>Finish</b></p>
-					<img src="../images/05/sshot-07.png" class="img-fluid mx-auto d-block">
-
-					<p>Se abrirá la aplicación, y damos click en el Icono (Site Manager)</p>
-					<img src="../images/05/sshot-08.png" class="img-fluid mx-auto d-block">
-
-					<p>Damos en <b class='btn btn-secondary'>New Site</b> y lo renombras como gustes</p>
-					<p>Editamos los siguientes campos en la pestaña <b>General</b>:</p>
-					<ol>
-						<li>Host: <b>189.213.198.110</b></li>
-						<li>Encryption: <b>Only use plain FTP (insecure)</b></li>
-						<li>User: <b>TecnicoGC</b></li>
-						<li>Password: <b>***************</b></li>
-					</ol>
-					<img src="../images/05/sshot-09.png" class="img-fluid mx-auto d-block">
-
-					<p>En la pestaña <b>Advanced</b> la dejamos así por default</p>
-					<img src="../images/05/sshot-10.png" class="img-fluid mx-auto d-block">
-
-					<p>En la pestaña <b>Transfer Settings</b> seleccionamos <b>Active</b></p>
-					<img src="../images/05/sshot-11.png" class="img-fluid mx-auto d-block">
-
-					<p>En la pestaña <b>Charset</b> seleccionamos <b>Force UTF-8</b> y damos click en <b class='btn btn-secondary'>Connect</b></p>
-					<img src="../images/05/sshot-12.png" class="img-fluid mx-auto d-block">
-
-					<p>Nos aparecerá este mensaje, damos click en <b class='btn btn-secondary'>OK</b></p>
-					<img src="../images/05/sshot-13.png" class="img-fluid mx-auto d-block">
-
-					<p>Nos mostrará esta ventana donde seleccionaremos <b>Private Networks</b> y <b>Public Networks</b> como se muestra en la imagen y damos click en <b class='btn btn-secondary'>Allow access</b></p>
-					<img src="../images/05/sshot-14.png" class="img-fluid mx-auto d-block">
-
-					<p>Ya podremos ver los directorios en la parte derecha del programa.</p>
-					<img src="../images/05/sshot-15.png" class="img-fluid mx-auto d-block">
+					<p>Al abrir la puerta del CPU, debería aparecer un código 904.</p>
+					<img src="../HowTo/Switches_KB5/sshot-12.png" class="img-fluid mx-auto d-block" title="SuperIO Configuration">
+					
 				</div>
 			</div>
 		</section>
 		<br>
 		<section id="conclusion">
 			<div class="alert alert-success alert-dismissable">
-				¡Listo! Ahora ya podrás hacer uso de la aplicación para realizar las descargas.</b>
+				Si todo funciona correctamente, ejecuta el Update <b>GameUpdate.Slot.SecuritySwitchesKB5.zip</b>.
 			</div>
 		</section>
 		<section id="goback">
@@ -247,31 +195,29 @@
 		</section>
 		<section>
 			<div class="blockcode">
-			<footer class="page-footer shadow">
-				<div class="d-flex flex-wrap justify-content-between align-items-center mx-auto py-4" style="width: 95%">
-				<div class="d-flex flex-wrap align-items-center">
-					<a href="" class="d-flex align-items-center p-0 text-dark">
-					<img alt="logo" src="../images/logo.png" width="40px" />
-					</a>
-					<small class="ms-2">Created by Miguel Angel Gómez Godínez - 2023</small>
-				</div>
-				<div>
-				<a href="https://wa.me/5215547036120?text=Hola%20Miguel,%20Buen%20d&iacute;a%20"  class="btn btn-dark btn-flat p-2">
-					<i class="fab fa-whatsapp"></i>
-					</a>
-					<a href="tel://5547036120" class="btn btn-dark btn-flat p-2">
-					<i class="fas fa-phone"></i>
-					</a>
-					<a href="https://t.me/winsysgroup" class="btn btn-dark btn-flat p-2">
-					<i class="fab fa-telegram"></i>
-					</a>
-				</div>
-				</div>
-			</footer>
+				<footer class="page-footer shadow">
+					<div class="d-flex flex-wrap justify-content-between align-items-center mx-auto py-4" style="width: 95%">
+						<div class="d-flex flex-wrap align-items-center">
+							<a href="" class="d-flex align-items-center p-0 text-dark">
+								<img alt="logo" src="../images/logo.png" width="40px" />
+							</a>
+							<small class="ms-2">Created by Miguel Angel Gómez Godínez - 2023</small>
+						</div>
+						<div>
+							<a href="https://wa.me/5215547036120?text=Hola%20Miguel,%20Buen%20d&iacute;a%20"  class="btn btn-dark btn-flat p-2">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+							<a href="tel://5547036120" class="btn btn-dark btn-flat p-2">
+								<i class="fas fa-phone"></i>
+							</a>
+							<a href="https://t.me/winsysgroup" class="btn btn-dark btn-flat p-2">
+								<i class="fab fa-telegram"></i>
+							</a>
+						</div>
+					</div>
+				</footer>
 			</div>
 		</section>
 	</main>
 </body>
 </html>
-				
-
