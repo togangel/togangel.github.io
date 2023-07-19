@@ -1,7 +1,7 @@
-host: localhost
-port: 4000
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
+# host: localhost
+# port: 4000
+url: "togangel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "winsystems" # the subpath of your site, e.g. /blog
 
 ###########################################################
 ### Welcome to Beautiful Jekyll!
