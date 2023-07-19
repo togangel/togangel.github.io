@@ -1,7 +1,7 @@
 # host: localhost
 # port: 4000
 url: "https://togangel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/winsystems" # the subpath of your site, e.g. /blog
+baseurl: "/blog/winsystems" # the subpath of your site, e.g. /blog
 
 ###########################################################
 ### Welcome to Beautiful Jekyll!
@@ -261,7 +261,7 @@ date_format: "%B %-d, %Y"
 # timezone: "America/Toronto"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year/:month/:day/:title
+permalink: /winsystems/:year/:month/:day/:title
 paginate: 5
 
 kramdown:
