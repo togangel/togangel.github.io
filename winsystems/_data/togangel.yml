@@ -1,0 +1,93 @@
+ftp: "189.216.168.159"
+
+# ---------------------------------------------------------------------------
+
+updates:
+- title: Jackpot Licence File Manager
+  version:  licence
+  url: GameUpdate.LicenceFileManager.JP.zip
+  ftp: /Tools/Updates/GameUpdate.LicenceFileManager.JP.zip
+  
+- title: Slot Licence File Manager
+  version:  licence
+  url: SystemUpdate.LicenceFileManager.Slot.zip
+  ftp: /Tools/Updates/SystemUpdate.LicenceFileManager.Slot.zip
+
+- title: WinSCP-5.21.8-Setup.exe
+  url: https:/winscp.net/download/WinSCP-5.21.8-Setup.exe
+  guia: Guía de instalación
+  url2: 
+  version:  downloads
+  
+- title: FileZilla_3.64.0_win64-setup.exe
+  url: https:/filezilla-project.org/download.php?show_all=1
+  guia: Guía de instalación
+  url2: 
+  version:  downloads
+
+# ---------------------------------------------------------------------------
+
+adventure:
+- title: Update Jackpot Controller
+  version: 48
+  url: GameUpdate.JPController.CountrySelector_V3_A20.zip
+  ftp: /Adventure/GameUpdate.JPController.CountrySelector_V3_A20.zip
+
+- title: Update Slot
+  version:  48
+  url: GameUpdate.Slot.CountrySelector_V2.0.20_48_MEX.zip
+  ftp: /Adventure/GameUpdate.Slot.CountrySelector_V2.0.20_48_MEX.zip
+
+- title: Imagen Jackpot DA77
+  version:  48
+  url: ADV_JP_Controller_800p_Mex_DA77_Win8_09032023-00-00.mrimg
+  ftp: /Adventure/ADV_JP_Controller_800p_Mex_DA77_Win8_09032023-00-00.mrimg
+  
+- title: Imagen Jackpot Axiomtek (pendiente)
+  version:  48
+  url: 
+  ftp: /Adventure/
+  
+- title: Imagen Slot Kino DA77
+  version:  48
+  url: Adventure7-1_800p_Mex_5c93_1036_DA77_Win8_31012023-00-00.mrimg
+  ftp: /Adventure/Adventure7-1_800p_Mex_5c93_1036_DA77_Win8_31012023-00-00.mrimg
+  
+- title: Imagen Slot Axiomtek
+  version:  48
+  url: Adventure7-1_Mex_5c93_1036_Axiomtek_Win10_30012023-00-00.mrimg
+  ftp: /Adventure/Adventure7-1_Mex_5c93_1036_Axiomtek_Win10_30012023-00-00.mrimg
+  
+# ---------------------------------------------------------------------------
+
+goddess_link:
+- title: "Update Country Selector JP"
+  version: 22
+  url: GameUpdate.JPController.CountrySelector_Goddes_A20.zip
+  ftp: /Goddes_Link/GameUpdate.JPController.CountrySelector_Goddes_A20.zip
+
+- title: Update Country Selector Slot
+  version:  22
+  url: GameUpdate.Slot.CountrySelector_Goddess_V22_ALL.zip
+  ftp: /Goddes_Link/GameUpdate.Slot.CountrySelector_Goddess_V22_ALL.zip
+
+- title: Imagen Jackpot DA77
+  version:  22
+  url: GL_JP_Controller_Mega50K_1.0_DA77_Win8_31082022-00-00.mrimg
+  ftp: /Goddes_Link/GL_JP_Controller_Mega50K_1.0_DA77_Win8_31082022-00-00.mrimg
+  
+- title: Imagen Jackpot Axiomtek
+  version:  22
+  url: GL_JP_Controller_Mega50K_1.0_AxiomtekNew_Win10_31082022-00-00.mrimg
+  ftp: /Goddes_Link/GL_JP_Controller_Mega50K_1.0_AxiomtekNew_Win10_31082022-00-00.mrimg
+  
+- title: Imagen Slot Kino DA77 (No existe imagen)
+  version:  22
+  url: 
+  ftp: 
+  
+- title: Imagen Slot Axiomtek
+  version:  22
+  url: GoddessLink_GLI_Axiomtek_Win_1021_06072023-00-00.mrimg
+  ftp: /Goddes_Link/GoddessLink_GLI_Axiomtek_Win_1021_06072023-00-00.mrimg
+  
