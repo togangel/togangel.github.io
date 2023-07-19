@@ -261,7 +261,7 @@ date_format: "%B %-d, %Y"
 # timezone: "America/Toronto"
 markdown: kramdown
 highlighter: rouge
-permalink: /winsystems/:year/:month/:day/:title
+permalink: /:year/:month/:day/:title
 paginate: 5
 
 kramdown:
@@ -271,7 +271,7 @@ kramdown:
 defaults:
   -
     scope:
-      path: ""
+      path: "/blog/winsystems/_posts"
       type: "posts"
     values:
       layout: "post"
