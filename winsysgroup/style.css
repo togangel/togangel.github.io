@@ -1,0 +1,68 @@
+@media print{
+
+  .oculto-impresion, .oculto-impresion *{
+
+    display: none !important;
+  }
+}
+
+canvas {
+  background-color: cyan; 
+}
+		#sig-canvas {
+		position: inline-block;
+		border: 2px dotted #CCCCCC;
+		border-radius: 5px;
+		cursor: crosshair;
+		width: 100%;
+		}
+
+		#sig-dataUrl {
+		width: 100%;
+		}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0px auto;
+}
+ 
+td, th {
+    border: 1px solid #eee;
+    padding: 1px;
+    text-align: center;   
+}
+ 
+tr:nth-child(even) {
+    text-align: center;   
+}
+ 
+td:nth-child(n + 3),
+th:nth-child(n + 3) {
+    text-align: center;
+}
+ 
+tbody tr:hover {
+    background-color: aquamarine;
+}
+ 
+thead {
+    background-color: black;
+    color: white;
+}
+
+textarea {
+
+	font-size: 20px;
+	width: 100%;
+    border: 1px solid #eee;
+    background-color: #ddd;
+}
+         select {
+            width: 100%;
+    text-align: center;
+    text-align-last: center;
+    -moz-text-align-last: center;
+	-webkit-appearance: none;
+			 }
