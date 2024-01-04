@@ -1,1 +1,2926 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ingreso & Retiro de terminales</title>
+    <script type="text/javascript" nonce="db8ebe7268aa46b79df43072edf" src="//local.adguard.org?ts=1668595081662&amp;type=content-script&amp;dmn=mail-attachment.googleusercontent.com&amp;pth=%2Fattachment%2Fu%2F0%2Fs%2F%3Fview%3Datt%26th%3D184800032b6dc3fa%26attid%3D0.1%26disp%3Dattd%26realattid%3D18480000f7329d0cb471%26safe%3D1%26zw%26saddbat%3DANGjdJ_LWWRt5-Hu6py4Twkl8HLg6bGKRbNR2jbwfiESgufQ-BL1Bw4PgRkF2bgEd3AnS1Ya3X3YC3MiNKGiBFw7uLgIGdU1zxDoHAE8JDdOTX6xNlfx_yv8D_lFnMNvYl3bgu4yqjdb6wsbfCW5djvisz4Oj_H2wJbHp0HSyn5eA1K_hkDzKLg5VtOmAplfN1vCiTEWDQGMz_FHKHzksZJwFIlTf6nsIdBIQs-Mbcdgm7qQJgkfLSa5xLsGwhYjzbpJ2dB1rlCm1Jo9herjT4CV8i8kF5GAFi9LaPziZ_5S1ce0-YRbTHpzHY2-MGUtCGHXYrcIyGpz7DwTNBUMRBCCl7mwMlUQfOLb3qjqtZmFC7t_nOH6xObmXK9mguhtJTLEdkwEjRFRKkWm2QG64AAFjXXu0x9S-SpqnTRfuoHunDziJefHEgvP5fXzzP9E6DGLAD3dh0gzZ0lc7gVAJOSR5SYIwe8jZGzHktxkpLu2dS_H1xEOQoUKU7a4PdD6E36sOikn145zE7WnqKUMV15mp30-CGa0aKM2fQaNual0CpmV8BFvhFjtV7fApVmkL88Yn7r3lYfqClFToAsKy3m5gZt_STGSwsKpx1BZHI0k4Hdekk-CSJvQ9YTGI00vxaUROL4Cm96al0To_shR4GX9P5KaRKtEjaIuKm6mlF_iNxbBB1w4zQXisujOru4GWm6XBFMBte8wJo7K6J1i_xEyYzjJ1vYlhAlXpKxasyLl9D4rjvC2mncUWs0JlqStdvOUe5_RM-qCJDvb8FKrkFmuzr7IA4MOpunoLd1hlYV3d_2tNO_jhZjJvneG5luRjig_2iydJxeA0cmcMy_BV7TC3P-ggY_Xfp2qb0DWRiQgPc9eNwBfRJEEhz4KUHg0ndJTKlSO_hMxZWPEtgOHoDiXWv6y2r5UfJ8cot9JWUh8yCa_5do6RJkKsNhnNUw&amp;app=com.android.chrome&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script>
+<script type="text/javascript" nonce="db8ebe7268aa46b79df43072edf" src="//local.adguard.org?ts=1668595081662&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+				<img class="align-self-center m-3" src="https://attachments-us1-cloud-deskpro-com.s3.amazonaws.com/files/6589/16594/16593182RKHBWGXSHRWNAZK0-6213691257e1f_Winsystems_Logo_BLUE.png" style="width:120px">
+			<div class="media-body">
+				<br>
+				<h4 style="text-align:center">Reporte de ingreso / retiro de terminales</h4>
+			</div>
+		</div>
+		<hr>
+		<center>
+		<div class="row responsive">
+			<table>
+			<tr>
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Casino</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Casino">
+					</div>  
+				</td>
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Fecha</span>
+						</div>
+						<input type="date" class="form-control">
+					</div>  
+				</td>  
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text oculto-impresion">Retiro</span>
+							<span class="input-group-text oculto-impresion">Ingreso</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Retiro / Ingreso">
+					</div>  
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Contacto</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Contacto">
+					</div>  
+				</td>
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Teléfono</span>
+						</div>
+						<input type="Tel" class="form-control" placeholder="">
+					</div>  
+				</td>  
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text oculto-impresion">Slots</span>
+							<span class="input-group-text oculto-impresion">Ruleta</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Modelo / Serie">
+					</div>  
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Dirección</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Calle / No.">
+					</div>  
+				</td>
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text oculto-impresion"></span>
+						</div>
+						<input type="text" class="form-control" placeholder="Colonia / C.P.">
+					</div>  
+				</td>
+				<td>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Ciudad</span>
+							<span class="input-group-text">Estado</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Ciudad / Estado">
+					</div>  
+				</td>
+			</tr>
+			</table>
+		</div>
+		<hr>
+		<div class="row responsive">
+			<table>
+				<thead>
+					<tr>
+						<th>No.</th>
+						<th>Modelo</th>
+						<th>Serie</th>
+						<th>Wibu</th>
+						<th>Código</th>
+						<th>Código</th>
+						<th>#</th>
+						<th>Ruleta</th>
+						<th>Si</th>
+						<th>Código</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>01</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Cúpula">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>02</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Bola">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>03</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="JP Controler">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>04</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Pantalla">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>05</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Luces">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>06</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Llaves">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>07</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Brackets">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>08</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Sign">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>09</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Ceniceros">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>10</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group" placeholder="Peanas">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>11</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>12</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>13</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>14</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>15</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>16</td>
+						<td>
+							<input list="C0" class="input-group">
+								<datalist id="C0">
+								<option>S1</option>
+								<option>S2</option>
+								<option>ST2</option>
+								<option>S3</option>
+								<option>ST3</option>
+								<option>JP</option>
+								<option>Omega</option>
+								<option>Lumina</option>
+								<option>Ventura</option>
+								<option>Quadra</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="6">
+						</td>
+						<td>
+							<input class="input-group" type="tel" pattern="\d*" maxlength="11">
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C1" class="input-group">
+								<datalist id="C1">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C2" class="input-group">
+								<datalist id="C2">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								</datalist>
+							</input>
+						</td>
+						<td>
+							<input list="C3" class="input-group">
+								<datalist id="C3">
+								<option>Cúpula</option>
+								<option>Bola</option>
+								<option>JP Controler</option>
+								<option>Pantallas</option>
+								<option>Luces</option>
+								<option>Llaves</option>
+								<option>Brackets</option>
+								<option>Sign</option>
+								<option>Ceniceros</option>
+								</datalist>
+							</input>
+						<td>
+							<input class="input-group-sm" type="checkbox" id="flexSwitchCheckDefault">
+						</td>
+						<td>
+							<input list="C4" class="input-group">
+								<datalist id="C4">
+								<option>R01</option>
+								<option>R02</option>
+								<option>R03</option>
+								<option>R04</option>
+								<option>R05</option>
+								<option>R06</option>
+								<option>R07</option>
+								<option>R08</option>
+								<option>R09</option>
+								<option>R10</option>
+								<option>R11</option>
+								<option>R12</option>
+								<option>R13</option>
+								<option>R14</option>
+								<option>R15</option>
+								<option>R16</option>
+								<option>R17</option>
+								<option>R18</option>
+								<option>R19</option>
+								<option>R00</option>
+								<option>E20</option>
+								<option>E21</option>
+								<option>E22</option>
+								<option>E23</option>
+								<option>E24</option>
+								<option>E25</option>
+								<option>E26</option>
+								<option>E27</option>
+								<option>E00</option>
+								</datalist>
+							</input>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr>
+		<div class="row responsive">
+			<textarea rows="7" width="auto">Comentarios Adicionales:</textarea>
+		</div>
+		<hr>
+		<div class="row oculto-impresion responsive">
+			<canvas id="sig-canvas" width="1000" height='320' style='touch-action:none;border:1px solid #cccccc;'></canvas>
+		</div>
+		<div class="row oculto-impresion responsivo">
+			<button class="btn btn-success" id="sig-submitBtn">Aceptar</button>
+			<button class="btn btn-danger" id="sig-clearBtn">Borrar</button>
+		</div>
+		<div class="row oculto-impresion responsive">
+				<textarea id="sig-dataUrl" class="form-control" rows="1"></textarea>
+		</div>
+	</center>
+		<div class="row responsive">
+			<table>
+				<tr>
+					<td>
+						<img id="sig-image" src="https://winsysgroup.com/es/wp-content/themes/winsystem/images/logo-text.svg" class="responsive" width="250px" height="auto"/>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text oculto-impresion">Transportista:</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Nombre del Transportista">
+						</div>
+							<input type="text" class="form-control" placeholder="Compañia / Placas">
+					</td>
+					<td>
+						<img id="image" src="00_signature.jpg" alt="Miguel Angel Gómez Godínez"  class="responsive" width="285px" height="auto"/>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text oculto-impresion">Técnico:</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Técnico Gold Club:">
+						</div>
+							<input type="text" class="form-control" placeholder="Miguel Angel Gómez Godínez">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="row responsive">
+			<button onclick="javascript:imprimir()" class="btn btn-primary oculto-impresion">Imprimir</button>
+		</div>
+		<div class="row responsive">
+			<table class="oculto-impresion"  style="width:100%">
+				<tr>
+					<th colspan="4">Piezas Faltantes</th>
+					<th colspan="2">Detalles estéticos</th>
+				</tr>
+				<tr>
+					<td>Tarjeta madre</td>
+					<td>R01</td>
+					<td>Tarjeta Mux</td>
+					<td>R11</td>
+					<td>Daño lateral Izq.</td>
+					<td>E20</td>
+				</tr>
+				<tr>
+					<td>Disco Duro / SSD</td>
+					<td>R02</td>
+					<td>Tarjeta KB5</td>
+					<td>R12</td>
+					<td>Daño lateral Der.</td>
+					<td>E21</td>
+				</tr>
+				<tr>
+					<td>Memoria Ram</td>
+					<td>R03</td>
+					<td>Tarjeta Botonera</td>
+					<td>R13</td>
+					<td>Daño parte trasera</td>
+					<td>E22</td>
+				</tr>
+				<tr>
+					<td>Procesador</td>
+					<td>R04</td>
+					<td>Fuente Slot</td>
+					<td>R14</td>
+					<td>Daño parte frontal</td>
+					<td>E23</td>
+				</tr>
+				<tr>
+					<td>Tarjeta de Video</td>
+					<td>R05</td>
+					<td>Video / Topper</td>
+					<td>R15</td>
+					<td>Roto</td>
+					<td>E24</td>
+				</tr>
+				<tr>
+					<td>Fuente de poder</td>
+					<td>R06</td>
+					<td>Torreta bicolor</td>
+					<td>R16</td>
+					<td>Despintado</td>
+					<td>E25</td>
+				</tr>
+				<tr>
+					<td>Subwoofer</td>
+					<td>R07</td>
+					<td>Bocinas</td>
+					<td>R17</td>
+					<td>Raspado</td>
+					<td>E26</td>
+				</tr>
+				<tr>
+					<td>Monitor Superior</td>
+					<td>R08</td>
+					<td>UPS</td>
+					<td>R18</td>
+					<td>Quemado</td>
+					<td>E27</td>
+				</tr>
+				<tr>
+					<td>Monitor Inferior</td>
+					<td>R09</td>
+					<td>Wibu</td>
+					<td>R19</td>
+					<td>Sin daño</td>
+					<td>E00</td>
+				</tr>
+				<tr>
+					<td>I/O Board</td>
+					<td>R10</td>
+					<td>Todo Completo</td>
+					<td>R00</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<hr>
+		<div id="tabla"></div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+d3.text("ejemplo.csv", function(data) {
+var parsedCSV = d3.csv.parseRows(data);
+var container = d3.select("#tabla")
+.append("table")
+.selectAll("tr")
+.data(parsedCSV).enter()
+.append("tr")
+.selectAll("td")
+.data(function(d) {return d;}).enter()
+.append("td")
+.text(function(d) {return d;});
+});
+</script>
+	</div>
+</body>
+    <script src="script.js"></script>
+
+</html>
 
