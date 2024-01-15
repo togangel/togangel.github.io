@@ -5,9 +5,10 @@
     display: none !important;
   }
 }
-
-canvas {
-  background-color: cyan; 
+  
+.canvas {
+    background-color: cyan; 
+    
 }
 		#sig-canvas {
 		position: inline-block;
@@ -66,3 +67,5 @@ textarea {
     -moz-text-align-last: center;
 	-webkit-appearance: none;
 			 }
+			 
+
